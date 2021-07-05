@@ -1,3 +1,3 @@
-# cristianiniguez.github.io
+# www.cristianiniguez.com
 
-My webpage - Haz click [aquí](https://cristianiniguez.github.io/) para entrar!
+My website - Haz click [aquí](https://www.cristianiniguez.com/) para entrar!

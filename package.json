@@ -1,24 +1,17 @@
 {
-  "name": "cristianiniguez.github.io",
-  "version": "2.0.1",
-  "description": "My webpage",
-  "main": "src/index.js",
+  "name": "cristianiniguez_website",
+  "version": "3.0.0",
+  "description": "My website",
+  "main": "pages/index.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cristianiniguez/cristianiniguez.github.io.git"
-  },
   "keywords": [],
   "author": "cristianiniguez <felizpc1@gmail.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cristianiniguez/cristianiniguez.github.io/issues"
-  },
   "homepage": "https://www.cristianiniguez.com",
   "dependencies": {
     "axios": "^0.21.1",
@@ -35,5 +28,12 @@
     "eslint-config-next": "^11.0.1",
     "postcss": "^8.3.5",
     "sass": "^1.35.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristianiniguez/cristianiniguez_website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cristianiniguez/cristianiniguez_website/issues"
   }
 }
