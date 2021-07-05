@@ -1,0 +1,40 @@
+@import '../../global';
+
+.about {
+  text-align: center;
+
+  &__container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+
+    @include tablet {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  &__img {
+    font-size: 3em;
+
+    @include tablet {
+      font-size: 6em;
+    }
+
+    @include desktop {
+      font-size: 7em;
+    }
+  }
+
+  &__cv {
+    color: $gray;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+
+    &:hover {
+      color: $very-dark-blue;
+      background-color: $shadow;
+    }
+  }
+}

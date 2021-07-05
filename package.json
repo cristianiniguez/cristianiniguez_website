@@ -1,0 +1,39 @@
+{
+  "name": "cristianiniguez.github.io",
+  "version": "2.0.1",
+  "description": "My webpage",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cristianiniguez/cristianiniguez.github.io.git"
+  },
+  "keywords": [],
+  "author": "cristianiniguez <felizpc1@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cristianiniguez/cristianiniguez.github.io/issues"
+  },
+  "homepage": "https://www.cristianiniguez.com",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "classnames": "^2.3.1",
+    "formik": "^2.2.9",
+    "next": "^11.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.2.0",
+    "react-reveal": "^1.2.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-next": "^11.0.1",
+    "postcss": "^8.3.5",
+    "sass": "^1.35.1"
+  }
+}

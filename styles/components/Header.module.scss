@@ -1,0 +1,29 @@
+@import '../global';
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 60px;
+  padding: 0 2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease-in-out;
+
+  &--black {
+    background: $black;
+    box-shadow: 0 5px 10px $black;
+  }
+
+  &__logo {
+    color: $yellow;
+    margin: 0;
+    font-weight: bold;
+    font-size: 2.5em;
+
+    &::first-letter {
+      color: $blue;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import '../global';
+
+.footer {
+  background-color: $black;
+  color: $white;
+  padding: 0.5em 1em;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+
+  a {
+    color: $white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
