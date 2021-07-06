@@ -63,8 +63,8 @@
     width: 100%;
     height: 0px;
     box-shadow: 0 0 32px 32px rgba($white, 0.3);
-    transform: skewY(-45deg);
-    top: -100%;
+    transform: skewY(-45deg) translateY(-100%);
+    top: -150%;
     transition: 0.3s ease-in-out;
   }
 
@@ -76,7 +76,8 @@
     }
 
     &::before {
-      top: 200%;
+      transform: skewY(-45deg) translateY(100%);
+      top: 250%;
     }
   }
 
