@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav className={styles.nav}>
       <ul
         id='nav-menu'
-        className={classNames(styles.nav__menu, { [styles['nav__menu--shown']]: shown })}
+        className={classNames('reseted', styles.nav__menu, { [styles['nav__menu--shown']]: shown })}
       >
         {items.map(({ label, href }, i) => (
           <li key={i} onClick={() => setShown(false)}>

@@ -1,5 +1,5 @@
 import Layout from '../components/Layout.jsx';
-import { Hero, About, Knowledges, Services, Projects, Contact } from '../components/sections';
+import { Hero, About, Knowledges, Experience, Projects, Contact } from '../components/sections';
 
 const Home = () => {
   return (
@@ -7,7 +7,7 @@ const Home = () => {
       <Hero />
       <About />
       <Knowledges />
-      <Services />
+      <Experience />
       <Projects />
       <Contact />
     </Layout>
