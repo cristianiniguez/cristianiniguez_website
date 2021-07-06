@@ -45,6 +45,7 @@
   &__name {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     font-size: 2.5em;
+    margin: 0.5em 0;
   }
 
   &__first-name {
@@ -63,6 +64,11 @@
     opacity: 0.5;
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    @include tablet {
+      justify-content: start;
+    }
 
     svg {
       margin-right: 0.5em;
