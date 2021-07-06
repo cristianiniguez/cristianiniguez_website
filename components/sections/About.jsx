@@ -1,4 +1,4 @@
-import { FaLaptopCode } from 'react-icons/fa';
+import { FaLaptopCode, FaExternalLinkAlt } from 'react-icons/fa';
 import classNames from 'classnames';
 
 import styles from '../../styles/components/sections/About.module.scss';
@@ -19,7 +19,7 @@ const About = () => {
             💪.
           </p>
           <a className={styles.about__cv} href='/docs/cristian-iniguez-cv.pdf' target='_blank'>
-            Ver mi CV
+            Ver mi CV <FaExternalLinkAlt />
           </a>
         </div>
       </div>

@@ -32,6 +32,11 @@
     border-radius: 5px;
     transition: 0.3s;
 
+    svg {
+      font-size: 0.9rem;
+      margin-left: 0.5em;
+    }
+
     &:hover {
       color: $blue10;
       background-color: $shadow;
