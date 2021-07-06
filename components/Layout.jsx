@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <>
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <link rel='shortcut icon' href='favicon.png' type='image/png' />
+        <link rel='shortcut icon' href='favicon.svg' type='image/svg' />
         <title>Cristian Iñiguez | Junior Web Developer</title>
       </Head>
       <div className={styles.layout}>
