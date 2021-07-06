@@ -23,66 +23,38 @@ const services = [
     title: 'Páginas, Sitios y Aplicaciones Web',
     Icon: FaWindowRestore,
     details: [
-      {
-        label: 'Refleja tus ideas',
-        Icons: [FaBullhorn, FaGlobeAmericas],
-      },
-      {
-        label: 'Responsive Design',
-        Icons: [FaMobileAlt, FaTabletAlt],
-      },
-      {
-        label: 'Buenas funcionalidades',
-        Icons: [FaCheckSquare],
-      },
+      { label: 'Refleja tus ideas', Icons: [FaBullhorn, FaGlobeAmericas] },
+      { label: 'Responsive Design', Icons: [FaMobileAlt, FaTabletAlt] },
+      { label: 'Buenas funcionalidades', Icons: [FaCheckSquare] },
     ],
   },
   {
     title: 'Aplicaciones de Escritorio',
     Icon: FaDesktop,
     details: [
-      {
-        label: 'Software multiplataforma',
-        Icons: [FaWindows, FaApple, FaLinux],
-      },
-      {
-        label: 'Manejo de Base de Datos',
-        Icons: [FaDatabase],
-      },
-      {
-        label: 'Diseño Amigable',
-        Icons: [FaPalette],
-      },
+      { label: 'Software multiplataforma', Icons: [FaWindows, FaApple, FaLinux] },
+      { label: 'Manejo de Base de Datos', Icons: [FaDatabase] },
+      { label: 'Diseño Amigable', Icons: [FaPalette] },
     ],
   },
   {
     title: 'Desarrolo de APIs',
     Icon: FaDatabase,
     details: [
-      {
-        label: 'Autenticación',
-        Icons: [FaUser],
-      },
-      {
-        label: 'Manejo de Base de Datos',
-        Icons: [FaDatabase],
-      },
-      {
-        label: 'Integración con el Frontend',
-        Icons: [FaNetworkWired],
-      },
+      { label: 'Autenticación', Icons: [FaUser] },
+      { label: 'Manejo de Base de Datos', Icons: [FaDatabase] },
+      { label: 'Integración con el Frontend', Icons: [FaNetworkWired] },
     ],
   },
 ];
 
 const Service = ({ title, Icon, details }) => (
   <article className={styles.service}>
-    <div className={styles.service__front}>
-      <h3 className={styles.service__title}>
-        <Icon /> {title}
-      </h3>
-    </div>
-    <div className={styles.service__back}>
+    <header className={styles.service__header}>
+      <Icon />
+      <h3 className={styles.service__title}>{title}</h3>
+    </header>
+    <main className={styles.service__main}>
       {details.map(({ label, Icons }, detail_i) => (
         <p key={detail_i} className={styles.service__detail}>
           {Icons.map((I, icon_i) => (
@@ -91,13 +63,12 @@ const Service = ({ title, Icon, details }) => (
           <span>{label}</span>
         </p>
       ))}
-    </div>
+    </main>
   </article>
 );
 
 const Services = () => {
   return (
-    // <section id='services' className='services section section--light'>
     <section id='services' className={classNames(styles.services, 'section section--light')}>
       <div className='container'>
         <h2 className='section__title'>Mis Servicios</h2>
