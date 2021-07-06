@@ -1,17 +1,6 @@
 @import '../../global';
 
 .knowledges {
-  &__container {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-    align-items: center;
-
-    @include md {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-
   &__title {
     padding: 1em;
     display: flex;
@@ -28,9 +17,24 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
+  }
 
-    @include lg {
-      grid-template-columns: repeat(3, 1fr);
+  &__group {
+    h3 {
+      text-align: center;
+    }
+
+    & > div {
+      display: grid;
+      gap: 1em;
+
+      @include sm {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include lg {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   }
 }
