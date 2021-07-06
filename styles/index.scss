@@ -29,7 +29,7 @@ a {
 .section {
   padding: 3em 2em;
 
-  @include tablet {
+  @include md {
     font-size: 1.25em;
   }
 

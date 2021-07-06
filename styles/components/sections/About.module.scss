@@ -9,7 +9,7 @@
     align-items: center;
     grid-template-columns: 1fr;
 
-    @include tablet {
+    @include md {
       grid-template-columns: 1fr 2fr;
     }
   }
@@ -17,11 +17,11 @@
   &__img {
     font-size: 3em;
 
-    @include tablet {
+    @include md {
       font-size: 6em;
     }
 
-    @include desktop {
+    @include lg {
       font-size: 7em;
     }
   }

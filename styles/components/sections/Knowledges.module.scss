@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
 
-    @include tablet {
+    @include md {
       grid-template-columns: repeat(2, 1fr);
     }
   }
@@ -29,7 +29,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
 
-    @include desktop {
+    @include lg {
       grid-template-columns: repeat(3, 1fr);
     }
   }

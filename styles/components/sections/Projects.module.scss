@@ -3,7 +3,7 @@
 .project {
   text-align: center;
 
-  @include desktop {
+  @include lg {
     display: flex;
     align-items: center;
 
@@ -20,7 +20,7 @@
   &__info {
     padding: 1em;
 
-    @include desktop {
+    @include lg {
       flex: 1 0 0;
       padding: 2em;
     }
@@ -57,7 +57,7 @@
       width: 100%;
     }
 
-    @include desktop {
+    @include lg {
       flex: 1 0 0;
       box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
     }

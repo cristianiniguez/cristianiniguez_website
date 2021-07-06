@@ -4,7 +4,7 @@
   &__grid {
     text-align: center;
 
-    @include tablet {
+    @include md {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
@@ -73,7 +73,7 @@
   }
 
   &__status {
-    @include tablet {
+    @include md {
       font-size: 0.75em;
     }
 
@@ -112,7 +112,7 @@
         background-color: rgba(0, 0, 0, 0.2);
       }
 
-      @include tablet {
+      @include md {
         font-size: 1.5em;
       }
     }
