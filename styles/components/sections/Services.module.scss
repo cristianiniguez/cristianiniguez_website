@@ -1,17 +1,9 @@
 @import '../../global';
 
 .services__container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1em;
-
-  @include md {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @include lg {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .service {
@@ -20,8 +12,9 @@
   color: $white;
   border-radius: 8px;
   text-align: center;
-  margin-top: 4em;
+  margin: 4em 1em 0;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  min-width: 300px;
 
   &__header {
     position: absolute;

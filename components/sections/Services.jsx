@@ -24,7 +24,7 @@ const services = [
     Icon: FaWindowRestore,
     details: [
       { label: 'Refleja tus ideas', Icons: [FaBullhorn, FaGlobeAmericas] },
-      { label: 'Responsive Design', Icons: [FaMobileAlt, FaTabletAlt] },
+      { label: 'Muéstrate en todas partes', Icons: [FaMobileAlt, FaTabletAlt] },
       { label: 'Buenas funcionalidades', Icons: [FaCheckSquare] },
     ],
   },
@@ -33,7 +33,7 @@ const services = [
     Icon: FaDesktop,
     details: [
       { label: 'Software multiplataforma', Icons: [FaWindows, FaApple, FaLinux] },
-      { label: 'Manejo de Base de Datos', Icons: [FaDatabase] },
+      { label: 'Conexión a Base de Datos', Icons: [FaDatabase] },
       { label: 'Diseño Amigable', Icons: [FaPalette] },
     ],
   },
@@ -42,7 +42,7 @@ const services = [
     Icon: FaDatabase,
     details: [
       { label: 'Autenticación', Icons: [FaUser] },
-      { label: 'Manejo de Base de Datos', Icons: [FaDatabase] },
+      { label: 'Conexión a Base de Datos', Icons: [FaDatabase] },
       { label: 'Integración con el Frontend', Icons: [FaNetworkWired] },
     ],
   },
