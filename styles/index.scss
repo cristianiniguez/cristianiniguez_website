@@ -21,6 +21,10 @@ a {
   color: currentColor;
 }
 
+button {
+  font-family: $primary-font;
+}
+
 .container {
   max-width: 1024px;
   margin: 0 auto;
