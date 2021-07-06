@@ -2,24 +2,22 @@
 
 .project {
   text-align: center;
+  margin: 2em 0;
 
   @include lg {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 'info image';
     align-items: center;
 
     &:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    &__info,
-    &__img {
-      flex: 1 0 0;
+      grid-template-areas: 'image info';
     }
   }
 
   &__info {
     @include lg {
-      flex: 1 0 0;
+      grid-area: info;
       padding: 2em;
       display: flex;
       justify-content: center;
@@ -42,9 +40,10 @@
 
   &__link {
     display: inline-block;
-    border-radius: 5px;
-    margin: 0 0.1em;
+    font-size: 0.9em;
     color: $gray;
+    margin: 0 0.1em;
+    border-radius: 5px;
     padding: 0.5em;
     transition: 0.3s ease;
 
@@ -55,6 +54,7 @@
   }
 
   &__img {
+    grid-area: image;
     margin: 1em 0;
 
     img {
@@ -63,13 +63,8 @@
       margin: 0 auto;
 
       @include lg {
-        width: 100%;
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
       }
-    }
-
-    @include lg {
-      flex: 1 0 0;
-      box-shadow: 10px 10px rgba(0, 0, 0, 0.5);
     }
   }
 }

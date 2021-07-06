@@ -108,19 +108,11 @@ const Project = ({ n, name, description, technologies, links: { page, repo, imag
               <ExternalLink href={page} className={styles.project__link}>
                 Link a la página
               </ExternalLink>
-              // <div className={styles.project__link}>
-              //   <a href={page} target='_blank' rel='noreferrer'>
-              //     Link a la página <FaExternalLinkAlt />
-              //   </a>
-              // </div>
             )}
             {repo && (
               <ExternalLink href={repo} className={styles.project__link}>
                 Link al repositorio
               </ExternalLink>
-              // <a href={repo} target='_blank' rel='noreferrer'>
-              //   Link al repositorio <FaExternalLinkAlt />
-              // </a>
             )}
           </div>
         </div>
