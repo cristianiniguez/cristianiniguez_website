@@ -27,7 +27,7 @@
       transition: all 0.3s ease-in-out;
 
       &:focus {
-        outline-color: rgba($dark-blue, 0.5);
+        outline-color: rgba($blue20, 0.5);
       }
     }
 
@@ -53,10 +53,10 @@
 
     button {
       height: 32px;
-      background-color: $dark-blue;
+      background-color: $blue20;
       color: $white;
       font-weight: bold;
-      border: 2px solid $dark-blue;
+      border: 2px solid $blue20;
       border-radius: 5px;
       cursor: pointer;
 
@@ -99,7 +99,7 @@
     a {
       $size: 50px;
       font-size: 2em;
-      color: $very-dark-blue;
+      color: $blue10;
       width: $size;
       height: $size;
       border-radius: 50%;

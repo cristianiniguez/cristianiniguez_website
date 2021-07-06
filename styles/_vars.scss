@@ -1,12 +1,14 @@
 /* Colors */
-$very-dark-blue: #000033;
-$dark-blue: #000066;
-$blue: #3498db;
-$yellow: #ffff00;
-$gray: #99a3a4;
-$white: white;
-$black: black;
-$shadow: rgba(0, 0, 0, 0.2);
+$blue10: hsl(240, 100%, 10%);
+$blue20: hsl(240, 100%, 20%);
+
+$black: hsl(0, 0%, 0%);
+$gray: hsl(0, 0%, 50%);
+$white: hsl(0, 0%, 100%);
+
+$blue: hsl(204, 70%, 53%);
+$yellow: hsl(60, 100%, 50%);
+$shadow: hsla(0, 0%, 0%, 0.2);
 
 $success: green;
 $error: red;
@@ -15,7 +17,7 @@ $error: red;
 $primary-font: Lato, sans-serif;
 
 /* Gradients */
-$hero-gradient: linear-gradient(30deg, $very-dark-blue, $dark-blue);
+$hero-gradient: linear-gradient(30deg, $blue10, $blue20);
 $shadow-gradient-pattern: $shadow 0%, $shadow 10%, transparent 10%, transparent 90%, $shadow 90%,
   $shadow 100%;
 $shadow-gradient: linear-gradient(75deg, $shadow-gradient-pattern),
