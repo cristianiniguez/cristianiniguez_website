@@ -1,29 +1,13 @@
-@mixin sm {
-  @media screen and (min-width: 576px) {
-    @content;
-  }
-}
+@import './breakpoints';
 
-@mixin md {
-  @media screen and (min-width: 768px) {
-    @content;
-  }
-}
+@mixin glass() {
+  border-radius: 1em;
+  border-top: 1px solid rgba($white, 0.5);
+  background-color: rgba($white, 0.1);
+  backdrop-filter: blur(5px);
+  transition: 0.3s ease-in;
 
-@mixin lg {
-  @media screen and (min-width: 992px) {
-    @content;
-  }
-}
-
-@mixin xl {
-  @media screen and (min-width: 1200px) {
-    @content;
-  }
-}
-
-@mixin xxl {
-  @media screen and (min-width: 1400px) {
-    @content;
+  &:hover {
+    background-color: rgba($white, 0.2);
   }
 }

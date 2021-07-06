@@ -1,0 +1,12 @@
+@import '../global';
+
+.external-link {
+  a {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-left: 0.5em;
+    }
+  }
+}

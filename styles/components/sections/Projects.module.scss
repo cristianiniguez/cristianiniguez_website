@@ -18,12 +18,18 @@
   }
 
   &__info {
-    padding: 1em;
-
     @include lg {
       flex: 1 0 0;
       padding: 2em;
+      display: flex;
+      justify-content: center;
     }
+  }
+
+  &__glass {
+    padding: 1em;
+
+    @include glass;
   }
 
   &__technologies {
@@ -34,18 +40,17 @@
     }
   }
 
-  &__links {
-    a {
-      display: inline-block;
-      border-radius: 5px;
-      padding: 0.5em;
-      color: $gray;
-      transition: 0.3s ease;
+  &__link {
+    display: inline-block;
+    border-radius: 5px;
+    margin: 0 0.1em;
+    color: $gray;
+    padding: 0.5em;
+    transition: 0.3s ease;
 
-      &:hover {
-        color: $white;
-        background-color: rgba(0, 0, 0, 0.2);
-      }
+    &:hover {
+      color: $white;
+      background-color: rgba(0, 0, 0, 0.2);
     }
   }
 
@@ -54,7 +59,12 @@
 
     img {
       display: block;
-      width: 100%;
+      width: 90%;
+      margin: 0 auto;
+
+      @include lg {
+        width: 100%;
+      }
     }
 
     @include lg {

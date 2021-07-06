@@ -13,20 +13,17 @@ import {
   SiMongodb,
   SiFirebase,
 } from 'react-icons/si';
+import { FaExternalLinkAlt } from 'react-icons/fa';
 import classNames from 'classnames';
 
 import styles from '../../styles/components/sections/Projects.module.scss';
+import ExternalLink from '../ExternalLink';
 
 const projects = [
   {
     name: 'Tu Solucionario de Matemáticas',
     description: 'Cursos gratis de matemáticas para estudiantes escolares y universitarios',
-    technologies: [
-      {
-        name: 'React',
-        Icon: SiReact,
-      },
-    ],
+    technologies: [{ name: 'React', Icon: SiReact }],
     links: {
       page: 'https://tu-solucionario-de-matematicas.web.app',
       repo: 'https://github.com/cristianiniguez/tu_solucionario_de_matematicas',
@@ -38,14 +35,8 @@ const projects = [
     name: 'SaitoLab Inventory',
     description: 'Sistema de gestión de inventario',
     technologies: [
-      {
-        name: 'Electron',
-        Icon: SiElectron,
-      },
-      {
-        name: 'MySQL',
-        Icon: SiMysql,
-      },
+      { name: 'Electron', Icon: SiElectron },
+      { name: 'MySQL', Icon: SiMysql },
     ],
     links: {
       repo: 'https://github.com/cristianiniguez/saitolab-inventory',
@@ -57,18 +48,9 @@ const projects = [
     name: 'Platzi Web Challenge',
     description: 'Retos de la Escuela de Desarrollo Web de Platzi',
     technologies: [
-      {
-        name: 'HTML',
-        Icon: SiHtml5,
-      },
-      {
-        name: 'CSS',
-        Icon: SiCss3,
-      },
-      {
-        name: 'JavaScript',
-        Icon: SiJavascript,
-      },
+      { name: 'HTML', Icon: SiHtml5 },
+      { name: 'CSS', Icon: SiCss3 },
+      { name: 'JavaScript', Icon: SiJavascript },
     ],
     links: {
       page: 'https://cristianiniguez.github.io/platziwebchallenge',
@@ -80,22 +62,10 @@ const projects = [
     name: 'SaitoLab Notes',
     description: 'Aplicación de Notas en Markdown',
     technologies: [
-      {
-        name: 'React',
-        Icon: SiReact,
-      },
-      {
-        name: 'Bootstrap',
-        Icon: SiBootstrap,
-      },
-      {
-        name: 'Node JS (Express y Passport)',
-        Icon: SiNodeDotJs,
-      },
-      {
-        name: 'MongoDB',
-        Icon: SiMongodb,
-      },
+      { name: 'React', Icon: SiReact },
+      { name: 'Bootstrap', Icon: SiBootstrap },
+      { name: 'Node JS (Express y Passport)', Icon: SiNodeDotJs },
+      { name: 'MongoDB', Icon: SiMongodb },
     ],
     links: {
       page: 'https://saitolab-notes.vercel.app',
@@ -107,22 +77,10 @@ const projects = [
     name: 'Tu Solucionario de Progamación',
     description: 'Blogs de programación para todos',
     technologies: [
-      {
-        name: 'React',
-        Icon: SiReact,
-      },
-      {
-        name: 'Firebase',
-        Icon: SiFirebase,
-      },
-      {
-        name: 'TypeScript',
-        Icon: SiTypescript,
-      },
-      {
-        name: 'Sass',
-        Icon: SiSass,
-      },
+      { name: 'React', Icon: SiReact },
+      { name: 'Firebase', Icon: SiFirebase },
+      { name: 'TypeScript', Icon: SiTypescript },
+      { name: 'Sass', Icon: SiSass },
     ],
     links: {
       page: 'https://tusolucionariodeprogramacion.web.app',
@@ -137,24 +95,34 @@ const Project = ({ n, name, description, technologies, links: { page, repo, imag
   return (
     <div className={styles.project}>
       <div className={styles.project__info}>
-        <h3 className={styles.project__title}>{name}</h3>
-        <p className={styles.project__description}>{description}</p>
-        <div className={styles.project__technologies}>
-          {technologies.map((t, i) => (
-            <t.Icon key={i} title={t.name} />
-          ))}
-        </div>
-        <div className={styles.project__links}>
-          {page && (
-            <a href={page} target='_blank' rel='noreferrer'>
-              Link a la página
-            </a>
-          )}
-          {repo && (
-            <a href={repo} target='_blank' rel='noreferrer'>
-              Link al repositorio
-            </a>
-          )}
+        <div className={styles.project__glass}>
+          <h3 className={styles.project__title}>{name}</h3>
+          <p className={styles.project__description}>{description}</p>
+          <div className={styles.project__technologies}>
+            {technologies.map((t, i) => (
+              <t.Icon key={i} title={t.name} />
+            ))}
+          </div>
+          <div className={styles.project__links}>
+            {page && (
+              <ExternalLink href={page} className={styles.project__link}>
+                Link a la página
+              </ExternalLink>
+              // <div className={styles.project__link}>
+              //   <a href={page} target='_blank' rel='noreferrer'>
+              //     Link a la página <FaExternalLinkAlt />
+              //   </a>
+              // </div>
+            )}
+            {repo && (
+              <ExternalLink href={repo} className={styles.project__link}>
+                Link al repositorio
+              </ExternalLink>
+              // <a href={repo} target='_blank' rel='noreferrer'>
+              //   Link al repositorio <FaExternalLinkAlt />
+              // </a>
+            )}
+          </div>
         </div>
       </div>
       <Fade right={n % 2 === 0} left={n % 2 !== 0}>
