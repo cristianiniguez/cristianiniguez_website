@@ -1,0 +1,20 @@
+@function shadow-cross() {
+  $angle: 60deg;
+  $center-margin: 15%;
+  $left-center: $center-margin;
+  $right-center: 100% - $center-margin;
+  $lines-width: 1.5%;
+
+  $gradient-pattern: transparent 0%, transparent $left-center - 1.5 * $lines-width,
+    $shadow $left-center - 1.5 * $lines-width, $shadow $left-center - 0.5 * $lines-width,
+    transparent $left-center - 0.5 * $lines-width, transparent $left-center + 0.5 * $lines-width,
+    $shadow $left-center + 0.5 * $lines-width, $shadow $left-center + 1.5 * $lines-width,
+    transparent $left-center + 1.5 * $lines-width, transparent $right-center - 1.5 * $lines-width,
+    $shadow $right-center - 1.5 * $lines-width, $shadow $right-center - 0.5 * $lines-width,
+    transparent $right-center - 0.5 * $lines-width, transparent $right-center + 0.5 * $lines-width,
+    $shadow $right-center + 0.5 * $lines-width, $shadow $right-center + 1.5 * $lines-width,
+    transparent $right-center + 1.5 * $lines-width, transparent 100%;
+
+  @return linear-gradient($angle, $gradient-pattern),
+    linear-gradient($angle - 90deg, $gradient-pattern);
+}

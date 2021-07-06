@@ -34,7 +34,7 @@ a {
   }
 
   &--light {
-    background: $shadow-gradient, $white;
+    background: shadow-cross(), $white;
     color: $blue10;
   }
 
