@@ -4,7 +4,7 @@
   &__timeline {
     position: relative;
     border: 1px solid $blue10;
-    margin: 8em 0;
+    margin: 4em 0 8em;
   }
 
   &__pointer {
@@ -48,7 +48,6 @@
   }
 
   &__tooltip {
-    opacity: 0;
     transition: 0.3s ease-in-out;
     position: absolute;
     top: 150%;
@@ -76,10 +75,6 @@
     }
   }
 
-  &__container:hover &__tooltip {
-    opacity: 1;
-  }
-
   &__info {
     position: relative;
     max-height: 120px;
@@ -94,6 +89,16 @@
       bottom: 100%;
       left: 50%;
       transform: translateX(-50%);
+    }
+  }
+
+  @include md {
+    &__tooltip {
+      opacity: 0;
+    }
+
+    &__container:hover &__tooltip {
+      opacity: 1;
     }
   }
 }
