@@ -1,3 +1,4 @@
+import { FormattedMessage } from 'react-intl';
 import {
   SiHtml5,
   SiCss3,
@@ -57,11 +58,13 @@ const Knowledge = ({ name, Icon, starred }) => (
   </div>
 );
 
-const KnowledgesGroup = ({ label, knowledges }) => (
+const KnowledgesGroup = ({ id }) => (
   <div className={styles.knowledges__group}>
-    <h3>{label}</h3>
+    <h3>
+      <FormattedMessage id={`knowledges.subtitle.${id}`} />
+    </h3>
     <div>
-      {knowledges.map((k) => (
+      {knowledges[id].map((k) => (
         <Knowledge key={k.name} {...k} />
       ))}
     </div>
@@ -73,14 +76,16 @@ const Knowledges = () => {
     <section className={classNames(styles.knowledges, 'section')}>
       <div className={classNames(styles.knowledges__container, 'container')}>
         <div className={styles.knowledges__title}>
-          <h2 className='section__title'>Mis Conocimientos</h2>
+          <h2 className='section__title'>
+            <FormattedMessage id='knowledges.title' />
+          </h2>
           <FaBrain />
         </div>
         <div className={styles.knowledges__grid}>
-          <KnowledgesGroup label='Lenguajes' knowledges={knowledges.languages} />
-          <KnowledgesGroup label='Frameworks' knowledges={knowledges.frameworks} />
-          <KnowledgesGroup label='Bases de Datos' knowledges={knowledges.databases} />
-          <KnowledgesGroup label='Otras tecnologías' knowledges={knowledges.others} />
+          <KnowledgesGroup id='languages' />
+          <KnowledgesGroup id='frameworks' />
+          <KnowledgesGroup id='databases' />
+          <KnowledgesGroup id='others' />
         </div>
       </div>
     </section>

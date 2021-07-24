@@ -1,0 +1,68 @@
+{
+  "head.title": "Cristian Iñiguez | Web Developer",
+  "head.description": "Desarrollador Web con pasión por la tecnología y el software",
+
+  "header.link.home": "Inicio",
+  "header.link.about": "Sobre mí",
+  "header.link.services": "Servicios",
+  "header.link.projects": "Proyectos",
+  "header.link.contact": "Contacto",
+
+  "hero.firstname": "Cristian",
+  "hero.lastname": "Iñiguez",
+  "hero.description": "Desarrollador Web",
+  "hero.location": "Santa Cruz - Bolivia",
+  "hero.image.alt": "Foto de Cristian Iñiguez",
+
+  "about.title": "Sobre mí",
+  "about.description": "Soy un Desarrollador Web Junior con pasión por la tecnología y el software 👨‍💻. Actualmente estoy estudiando desarrollo web en Platzi 🌱. Mi objetivo es especializarme como Fullstack Developer y desarrollar aplicaciones multiplataforma con tecnologia web 💪.",
+  "about.cv": "Ver mi CV",
+
+  "knowledges.title": "Mis conocimientos",
+  "knowledges.subtitle.languages": "Lenguajes",
+  "knowledges.subtitle.frameworks": "Frameworks",
+  "knowledges.subtitle.databases": "Bases de datos",
+  "knowledges.subtitle.others": "Otras tecnologías",
+
+  "experience.title": "Mi Experiencia",
+  "experience.today": "Hoy",
+  "experience.icon.alt": "Icono de {name}",
+
+  "experience.hexacorp.title": "Desarrollador de Aplicaciones",
+  "experience.hexacorp.activities": "Desarrollo del sitio web de la empresa|Desarrollo de módulos de Odoo|Automatizaciones en general|Sitios para la empresa",
+
+  "services.title": "Mis Servicios",
+
+  "services.01.title": "Páginas, Sitios y Aplicaciones Web",
+  "services.01.description.01": "Refleja tu marca",
+  "services.01.description.02": "Muéstarte en todas partes",
+  "services.01.description.03": "En diferentes idiomas",
+
+  "services.02.title": "Aplicaciones de escritorio",
+  "services.02.description.01": "Software multiplataforma",
+  "services.02.description.02": "Conexión a base de datos",
+  "services.02.description.03": "Diseño amigable",
+
+  "services.03.title": "APIs development",
+  "services.03.description.01": "Autenticación",
+  "services.03.description.02": "Conexión a base de datos",
+  "services.03.description.03": "Integración con el Frontend",
+
+  "projects.title": "Mis Proyectos",
+  "projects.link.page": "Ver Página",
+  "projects.link.repo": "Ver Repositorio",
+
+  "projects.01.desc": "Cursos gratis de matemáticas para estudiantes escolares y universitarios",
+  "projects.02.desc": "Sistema de gestión de inventario",
+  "projects.03.desc": "Retos de la Escuela de Desarrollo Web de Platzi",
+  "projects.04.desc": "Aplicación de Notas en Markdown",
+  "projects.05.desc": "Blogs de programación para todos",
+
+  "contact.title": "Contáctame",
+  "contact.form.name": "Tu nombre",
+  "contact.form.email": "Tu correo",
+  "contact.form.message": "Tu mensaje",
+  "contact.form.button": "Enviar",
+  "contact.message.chat": "Si tienes un negocio o quieres establecer tu propia marca no dudes en contactarme",
+  "contact.message.social": "También puedes visitar mis redes sociales"
+}

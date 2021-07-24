@@ -1,9 +1,13 @@
+import { useRouter } from 'next/router';
+import { FormattedMessage } from 'react-intl';
 import { FaLaptopCode, FaExternalLinkAlt } from 'react-icons/fa';
 import classNames from 'classnames';
 
 import styles from '../../styles/components/sections/About.module.scss';
 
 const About = () => {
+  const { locale } = useRouter();
+
   return (
     <section id='about' className={classNames(styles.about, 'section section--light')}>
       <div className={classNames(styles.about__container, 'container')}>
@@ -11,15 +15,20 @@ const About = () => {
           <FaLaptopCode className={styles.about__img} />
         </div>
         <div className={styles.about__main}>
-          <h2 className='section__title'>Sobre mí</h2>
+          <h2 className='section__title'>
+            <FormattedMessage id='about.title' />
+          </h2>
           <p>
-            Soy un Desarrollador Web Junior con pasión por la tecnología y el software 👨‍💻.
-            Actualmente estoy estudiando desarrollo web en Platzi 🌱. Mi objetivo es especializarme
-            como Fullstack Developer y desarrollar aplicaciones multiplataforma con tecnologia web
-            💪.
+            <FormattedMessage id='about.description' />
           </p>
-          <a className={styles.about__cv} href='/docs/cristian-iniguez-cv.pdf' target='_blank'>
-            Ver mi CV <FaExternalLinkAlt />
+          <a
+            className={styles.about__cv}
+            href={`/docs/${locale}/cristian-iniguez-cv.pdf`}
+            target='_blank'
+            rel='noreferrer'
+          >
+            <FormattedMessage id='about.cv' />
+            <FaExternalLinkAlt />
           </a>
         </div>
       </div>

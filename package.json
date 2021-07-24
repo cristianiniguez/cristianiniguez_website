@@ -1,6 +1,6 @@
 {
   "name": "cristianiniguez_website",
-  "version": "3.0.0",
+  "version": "3.2.0",
   "description": "My website",
   "main": "pages/index.js",
   "scripts": {
@@ -21,7 +21,9 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
-    "react-reveal": "^1.2.2"
+    "react-intl": "^5.20.6",
+    "react-reveal": "^1.2.2",
+    "react-world-flags": "^1.4.0"
   },
   "devDependencies": {
     "eslint": "^7.30.0",

@@ -1,0 +1,68 @@
+{
+  "head.title": "Cristian Iñiguez | Web Developer",
+  "head.description": "Web Developer with passion for technology and software",
+
+  "header.link.home": "Start",
+  "header.link.about": "About me",
+  "header.link.services": "Services",
+  "header.link.projects": "Proyects",
+  "header.link.contact": "Contact",
+
+  "hero.firstname": "Cristian",
+  "hero.lastname": "Iñiguez",
+  "hero.description": "Web Developer",
+  "hero.location": "Santa Cruz - Bolivia",
+  "hero.image.alt": "Cristian Iñiguez Photo",
+
+  "about.title": "About me",
+  "about.description": "I'm a Web Developer with passion for technology and software 👨‍💻. Actually, I'm studying web development and programming on Platzi 🌱. My goal is to specialize as a Fullstack Developer and develop multiplatform applications with web technologies 💪.",
+  "about.cv": "Watch my CV",
+
+  "knowledges.title": "My Knowledges",
+  "knowledges.subtitle.languages": "Languages",
+  "knowledges.subtitle.frameworks": "Frameworks",
+  "knowledges.subtitle.databases": "Databases",
+  "knowledges.subtitle.others": "Other technologies",
+
+  "experience.title": "My Experience",
+  "experience.today": "Today",
+  "experience.icon.alt": "{name} icon",
+
+  "experience.hexacorp.title": "App Developer",
+  "experience.hexacorp.activities": "Company website development|Odoo modules development|Automations in general|Company sites",
+
+  "services.title": "My Services",
+
+  "services.01.title": "Web Pages, Sites and Applications",
+  "services.01.description.01": "Reflect your brand",
+  "services.01.description.02": "Show you everywhere",
+  "services.01.description.03": "In different languages",
+
+  "services.02.title": "Desktop Applications",
+  "services.02.description.01": "Multiplatform software",
+  "services.02.description.02": "Database connection",
+  "services.02.description.03": "Friendly design",
+
+  "services.03.title": "APIs development",
+  "services.03.description.01": "Authentication",
+  "services.03.description.02": "Database connection",
+  "services.03.description.03": "Frontend integration",
+
+  "projects.title": "My Projects",
+  "projects.link.page": "Watch Page",
+  "projects.link.repo": "Watch Repository",
+
+  "projects.01.desc": "Free Math Courses for School and College Students",
+  "projects.02.desc": "Inventory Management System",
+  "projects.03.desc": "Challenges from Platzi's Web Development School",
+  "projects.04.desc": "Markdown Notes Application",
+  "projects.05.desc": "Programming blogs for everyone",
+
+  "contact.title": "Contact Me",
+  "contact.form.name": "Your name",
+  "contact.form.email": "Your email",
+  "contact.form.message": "Your message",
+  "contact.form.button": "Send",
+  "contact.message.chat": "If you have a business or you're trying to establish your own brand, do not hesitate to contact me",
+  "contact.message.social": "Also, you can visit my social networks"
+}
