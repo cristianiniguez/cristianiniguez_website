@@ -1,3 +1,4 @@
+import { FormattedMessage } from 'react-intl';
 import { FaLaptopCode, FaExternalLinkAlt } from 'react-icons/fa';
 import classNames from 'classnames';
 
@@ -11,7 +12,9 @@ const About = () => {
           <FaLaptopCode className={styles.about__img} />
         </div>
         <div className={styles.about__main}>
-          <h2 className='section__title'>Sobre mí</h2>
+          <h2 className='section__title'>
+            <FormattedMessage id='about.title' />
+          </h2>
           <p>
             Soy un Desarrollador Web Junior con pasión por la tecnología y el software 👨‍💻.
             Actualmente estoy estudiando desarrollo web en Platzi 🌱. Mi objetivo es especializarme

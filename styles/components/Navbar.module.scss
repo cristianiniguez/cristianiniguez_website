@@ -81,6 +81,13 @@
     }
   }
 
+  &__btn {
+    background-color: transparent;
+    color: $white;
+    border: none;
+    outline: none;
+  }
+
   &__menu-btn {
     background-color: transparent;
     color: $white;
