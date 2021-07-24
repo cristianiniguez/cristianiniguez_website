@@ -1,6 +1,6 @@
 {
   "name": "cristianiniguez_website",
-  "version": "3.0.0",
+  "version": "3.2.0",
   "description": "My website",
   "main": "pages/index.js",
   "scripts": {
