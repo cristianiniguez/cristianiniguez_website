@@ -3,13 +3,12 @@
 .menu {
   position: absolute;
   right: 0;
-  top: 150%;
+  top: 250%;
   display: none;
 
   &--shown {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
   }
 
   li {
