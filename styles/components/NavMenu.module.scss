@@ -1,9 +1,14 @@
 @import '../global';
 
+.container {
+  position: relative;
+  margin-right: 1em;
+}
+
 .menu {
   position: absolute;
   right: 0;
-  top: 100%;
+  top: 120%;
   display: none;
   border: 1px solid $white;
   border-radius: 0.5em;
@@ -27,7 +32,8 @@
   }
 
   a {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba($black, 0.5);
+    backdrop-filter: blur(10px);
     display: block;
     padding: 1em 2em;
     color: $white;

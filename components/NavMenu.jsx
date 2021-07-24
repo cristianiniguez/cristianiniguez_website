@@ -17,7 +17,7 @@ const NavMenu = () => {
   const [shown, setShown] = useState(false);
 
   return (
-    <>
+    <div className={styles.container}>
       <ul
         id='nav-menu'
         className={classNames('reseted', styles.menu, { [styles['menu--shown']]: shown })}
@@ -33,7 +33,7 @@ const NavMenu = () => {
       <button className={styles.btn} onClick={() => setShown(!shown)}>
         <FaBars />
       </button>
-    </>
+    </div>
   );
 };
 

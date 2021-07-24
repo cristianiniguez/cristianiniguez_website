@@ -16,7 +16,7 @@ const NavLang = () => {
   const { locale, locales } = useRouter();
 
   return (
-    <>
+    <div className={styles.container}>
       <button className={styles.btn} onClick={() => setShown(!shown)}>
         <Flag code={flagCodes[locale]} />
       </button>
@@ -31,7 +31,7 @@ const NavLang = () => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 
