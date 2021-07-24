@@ -3,33 +3,34 @@
 .menu {
   position: absolute;
   right: 0;
-  top: 100%;
+  top: 150%;
   display: none;
-  border: 1px solid $white;
-  border-radius: 0.5em;
-  transition: 0.5s ease-in-out all;
-  flex-direction: column;
-  overflow: hidden;
 
   &--shown {
     display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  li {
+    margin-bottom: 1em;
   }
 
   a {
-    background-color: rgba(0, 0, 0, 0.2);
-    display: block;
-    padding: 1em 2em;
-    color: $white;
-    text-align: center;
-    transition: background-color 0.1s ease-in;
+    $locale: var(--locale);
+    $size: 24px;
+    width: $size;
+    height: $size;
+    background-color: $black;
+    box-shadow: 5px 5px 5px rgba($black, 0.5);
+    border-radius: 50%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
 
-    &:hover {
-      background-color: rgba(0, 0, 0, 0.5);
+    img {
+      width: 100%;
     }
-  }
-
-  li:not(:last-of-type) a {
-    border-bottom: 1px solid $white;
   }
 }
 
@@ -38,4 +39,10 @@
   color: $white;
   border: none;
   outline: none;
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 16px;
+  }
 }
