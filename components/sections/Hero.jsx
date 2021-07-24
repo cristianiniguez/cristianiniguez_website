@@ -1,6 +1,7 @@
 import { useIntl, FormattedMessage } from 'react-intl';
 import Fade from 'react-reveal/Fade';
 import { FaGlobeAmericas } from 'react-icons/fa';
+import Flag from 'react-world-flags';
 
 import styles from '../../styles/components/sections/Hero.module.scss';
 
@@ -29,7 +30,7 @@ const Hero = () => {
           <FormattedMessage id='hero.description' />
         </p>
         <p className={styles.hero__country}>
-          <FaGlobeAmericas />
+          <Flag code='BO' height={16} />
           <FormattedMessage id='hero.location' />
         </p>
       </div>

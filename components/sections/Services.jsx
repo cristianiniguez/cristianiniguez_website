@@ -5,7 +5,7 @@ import {
   FaGlobeAmericas,
   FaMobileAlt,
   FaTabletAlt,
-  FaCheckSquare,
+  FaLanguage,
   FaDesktop,
   FaWindows,
   FaApple,
@@ -26,7 +26,7 @@ const services = [
     details: [
       { label: '01', Icons: [FaBullhorn, FaGlobeAmericas] },
       { label: '02', Icons: [FaMobileAlt, FaTabletAlt] },
-      { label: '03', Icons: [FaCheckSquare] },
+      { label: '03', Icons: [FaLanguage] },
     ],
   },
   {
