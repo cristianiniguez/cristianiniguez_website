@@ -9,6 +9,7 @@
   "hero.lastname": "Iñiguez",
   "hero.description": "Web Developer",
   "hero.location": "Santa Cruz - Bolivia",
+  "hero.image.alt": "Cristian Iñiguez Photo",
 
   "about.title": "About me",
   "about.description": "I'm a Web Developer with passion for technology and software 👨‍💻. Actually, I'm studying web development and programming on Platzi 🌱. My goal is to specialize as a Fullstack Developer and develop multiplatform applications with web technologies 💪.",
@@ -22,6 +23,10 @@
 
   "experience.title": "My Experience",
   "experience.today": "Today",
+  "experience.icon.alt": "{name} icon",
+
+  "experience.hexacorp.title": "App Developer",
+  "experience.hexacorp.activities": "Company website development|Odoo modules development|Automations in general|Company sites",
 
   "services.title": "My Services",
 
@@ -33,6 +38,7 @@
   "contact.form.name": "Your name",
   "contact.form.email": "Your email",
   "contact.form.message": "Your message",
+  "contact.form.button": "Send",
   "contact.message.chat": "If you have a business or you're trying to establish your own brand, do not hesitate to contact me",
   "contact.message.social": "Also, you can visit my social networks"
 }

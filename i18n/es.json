@@ -9,6 +9,7 @@
   "hero.lastname": "Iñiguez",
   "hero.description": "Desarrollador Web",
   "hero.location": "Santa Cruz - Bolivia",
+  "hero.image.alt": "Foto de Cristian Iñiguez",
 
   "about.title": "Sobre mí",
   "about.description": "Soy un Desarrollador Web Junior con pasión por la tecnología y el software 👨‍💻. Actualmente estoy estudiando desarrollo web en Platzi 🌱. Mi objetivo es especializarme como Fullstack Developer y desarrollar aplicaciones multiplataforma con tecnologia web 💪.",
@@ -22,6 +23,10 @@
 
   "experience.title": "Mi Experiencia",
   "experience.today": "Hoy",
+  "experience.icon.alt": "Icono de {name}",
+
+  "experience.hexacorp.title": "Desarrollador de Aplicaciones",
+  "experience.hexacorp.activities": "Desarrollo del sitio web de la empresa|Desarrollo de módulos de Odoo|Automatizaciones en general|Sitios para la empresa",
 
   "services.title": "Mis Servicios",
 
@@ -33,6 +38,7 @@
   "contact.form.name": "Tu nombre",
   "contact.form.email": "Tu correo",
   "contact.form.message": "Tu mensaje",
+  "contact.form.button": "Enviar",
   "contact.message.chat": "Si tienes un negocio o quieres establecer tu propia marca no dudes en contactarme",
   "contact.message.social": "También puedes visitar mis redes sociales"
 }

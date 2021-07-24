@@ -1,4 +1,4 @@
-import { FormattedMessage } from 'react-intl';
+import { useIntl, FormattedMessage, FormattedDate } from 'react-intl';
 import { FaCarSide } from 'react-icons/fa';
 import classNames from 'classnames';
 
@@ -6,38 +6,43 @@ import styles from '../../styles/components/sections/Experience.module.scss';
 
 const jobs = [
   {
+    id: 'hexacorp',
     place: 'Hexacorp',
     icon: 'hexacorp.svg',
-    title: 'Desarrollador de Aplicaciones',
-    activities: [
-      'Desarrollo del sitio web de la empresa',
-      'Desarrollo de módulos de Odoo',
-      'Automatizaciones en general',
-      'Sitios para la empresa',
-    ],
-    from: 'Enero 2021',
+    from: new Date(2021, 1),
   },
 ];
 
-const Job = ({ place, icon, title, activities, from, to, index }) => {
+const Job = ({ id, place, icon, from, to, index }) => {
+  const intl = useIntl();
   const left = (100 * (index + 1)) / (jobs.length + 1);
 
   return (
     <div className={styles.job} style={{ left: `${left}%` }}>
       <div className={styles.job__container}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={`/images/jobs/${icon}`} alt={`Icono de ${place}`} />
+        <img
+          src={`/images/jobs/${icon}`}
+          alt={intl.formatMessage({ id: 'experience.icon.alt' }, { name: place })}
+        />
         <div className={styles.job__time}>
           <p>
-            {from} - {to || <FormattedMessage id='experience.today' />}
+            {from && <FormattedDate value={from} year='numeric' month='long' />} -{' '}
+            {to ? (
+              <FormattedDate value={to} year='numeric' month='long' />
+            ) : (
+              <FormattedMessage id='experience.today' />
+            )}
           </p>
         </div>
         <div className={styles.job__tooltip}>
           <div className={styles.job__info}>
             <h3>{place}</h3>
-            <h4>{title}</h4>
+            <h4>
+              <FormattedMessage id={`experience.${id}.title`} />
+            </h4>
             <ul>
-              {activities.map((act, i) => (
+              {intl.messages[`experience.${id}.activities`].split('|').map((act, i) => (
                 <li key={i}>{act}</li>
               ))}
             </ul>

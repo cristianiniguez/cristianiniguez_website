@@ -1,16 +1,18 @@
-import { FormattedMessage } from 'react-intl';
+import { useIntl, FormattedMessage } from 'react-intl';
 import Fade from 'react-reveal/Fade';
 import { FaGlobeAmericas } from 'react-icons/fa';
 
 import styles from '../../styles/components/sections/Hero.module.scss';
 
 const Hero = () => {
+  const { messages } = useIntl();
+
   return (
     <section className={styles.hero}>
       <Fade>
         <div className={styles.hero__img}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src='/images/me.jpg' alt='Foto de Cristian Iñiguez' />
+          <img src='/images/me.jpg' alt={messages['hero.image.alt']} />
         </div>
       </Fade>
       <div className={styles.hero__info}>

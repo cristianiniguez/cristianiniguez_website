@@ -1,17 +1,24 @@
+import { useIntl, FormattedMessage } from 'react-intl';
 import { Formik, Form, Field } from 'formik';
 import axios from 'axios';
 
 import styles from '../styles/components/ContactForm.module.scss';
 
+const sendMail = ({ values }) => {
+  return axios.post('https://formspree.io/f/xzbydykd', values, {
+    headers: { Accept: 'application/json' },
+  });
+};
+
 const ContactForm = () => {
+  const { messages } = useIntl();
+
   const initialValues = { name: '', email: '', message: '' };
 
   const onSubmit = async (values, { setSubmitting, resetForm, setStatus }) => {
     setStatus(undefined);
     try {
-      const response = await axios.post('https://formspree.io/f/xzbydykd', values, {
-        headers: { Accept: 'application/json' },
-      });
+      const response = await sendMail(values);
       console.log(response);
       resetForm();
       setStatus('success');
@@ -28,13 +35,20 @@ const ContactForm = () => {
       <Formik {...{ initialValues, onSubmit }}>
         {({ status, isSubmitting }) => (
           <Form>
-            <Field name='name' type='text' placeholder='Tu nombre' required />
-            <Field name='email' type='email' placeholder='Tu correo' required />
+            <Field name='name' type='text' placeholder={messages['contact.form.name']} required />
+            <Field
+              name='email'
+              type='email'
+              placeholder={messages['contact.form.email']}
+              required
+            />
             <Field name='message'>
-              {({ field }) => <textarea {...field} placeholder='Tu mensaje' required />}
+              {({ field }) => (
+                <textarea {...field} placeholder={messages['contact.form.message']} required />
+              )}
             </Field>
             <button type='submit' disabled={isSubmitting}>
-              Enviar
+              <FormattedMessage id='contact.form.button' />
             </button>
             {status && (
               <p
