@@ -33,9 +33,30 @@
 
   "services.title": "Mis Servicios",
 
+  "services.01.title": "Páginas, Sitios y Aplicaciones Web",
+  "services.01.description.01": "Refleja tu marca",
+  "services.01.description.02": "Muéstarte en todas partes",
+  "services.01.description.03": "En diferentes idiomas",
+
+  "services.02.title": "Aplicaciones de escritorio",
+  "services.02.description.01": "Software multiplataforma",
+  "services.02.description.02": "Conexión a base de datos",
+  "services.02.description.03": "Diseño amigable",
+
+  "services.03.title": "APIs development",
+  "services.03.description.01": "Autenticación",
+  "services.03.description.02": "Conexión a base de datos",
+  "services.03.description.03": "Integración con el Frontend",
+
   "projects.title": "Mis Proyectos",
   "projects.link.page": "Ver Página",
   "projects.link.repo": "Ver Repositorio",
+
+  "projects.01.desc": "Cursos gratis de matemáticas para estudiantes escolares y universitarios",
+  "projects.02.desc": "Sistema de gestión de inventario",
+  "projects.03.desc": "Retos de la Escuela de Desarrollo Web de Platzi",
+  "projects.04.desc": "Aplicación de Notas en Markdown",
+  "projects.05.desc": "Blogs de programación para todos",
 
   "contact.title": "Contáctame",
   "contact.form.name": "Tu nombre",

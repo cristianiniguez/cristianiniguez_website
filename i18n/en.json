@@ -33,9 +33,30 @@
 
   "services.title": "My Services",
 
+  "services.01.title": "Web Pages, Sites and Applications",
+  "services.01.description.01": "Reflect your brand",
+  "services.01.description.02": "Show you everywhere",
+  "services.01.description.03": "In different languages",
+
+  "services.02.title": "Desktop Applications",
+  "services.02.description.01": "Multiplatform software",
+  "services.02.description.02": "Database connection",
+  "services.02.description.03": "Friendly design",
+
+  "services.03.title": "APIs development",
+  "services.03.description.01": "Authentication",
+  "services.03.description.02": "Database connection",
+  "services.03.description.03": "Frontend integration",
+
   "projects.title": "My Projects",
   "projects.link.page": "Watch Page",
   "projects.link.repo": "Watch Repository",
+
+  "projects.01.desc": "Free Math Courses for School and College Students",
+  "projects.02.desc": "Inventory Management System",
+  "projects.03.desc": "Challenges from Platzi's Web Development School",
+  "projects.04.desc": "Markdown Notes Application",
+  "projects.05.desc": "Programming blogs for everyone",
 
   "contact.title": "Contact Me",
   "contact.form.name": "Your name",

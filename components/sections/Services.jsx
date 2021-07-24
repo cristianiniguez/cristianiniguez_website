@@ -21,39 +21,41 @@ import styles from '../../styles/components/sections/Services.module.scss';
 
 const services = [
   {
-    title: 'Páginas, Sitios y Aplicaciones Web',
+    id: '01',
     Icon: FaWindowRestore,
     details: [
-      { label: 'Refleja tus ideas', Icons: [FaBullhorn, FaGlobeAmericas] },
-      { label: 'Muéstrate en todas partes', Icons: [FaMobileAlt, FaTabletAlt] },
-      { label: 'Buenas funcionalidades', Icons: [FaCheckSquare] },
+      { label: '01', Icons: [FaBullhorn, FaGlobeAmericas] },
+      { label: '02', Icons: [FaMobileAlt, FaTabletAlt] },
+      { label: '03', Icons: [FaCheckSquare] },
     ],
   },
   {
-    title: 'Aplicaciones de Escritorio',
+    id: '02',
     Icon: FaDesktop,
     details: [
-      { label: 'Software multiplataforma', Icons: [FaWindows, FaApple, FaLinux] },
-      { label: 'Conexión a Base de Datos', Icons: [FaDatabase] },
-      { label: 'Diseño Amigable', Icons: [FaPalette] },
+      { label: '01', Icons: [FaWindows, FaApple, FaLinux] },
+      { label: '02', Icons: [FaDatabase] },
+      { label: '03', Icons: [FaPalette] },
     ],
   },
   {
-    title: 'Desarrolo de APIs',
+    id: '03',
     Icon: FaDatabase,
     details: [
-      { label: 'Autenticación', Icons: [FaUser] },
-      { label: 'Conexión a Base de Datos', Icons: [FaDatabase] },
-      { label: 'Integración con el Frontend', Icons: [FaNetworkWired] },
+      { label: '01', Icons: [FaUser] },
+      { label: '02', Icons: [FaDatabase] },
+      { label: '03', Icons: [FaNetworkWired] },
     ],
   },
 ];
 
-const Service = ({ title, Icon, details }) => (
+const Service = ({ id, Icon, details }) => (
   <article className={styles.service}>
     <header className={styles.service__header}>
       <Icon />
-      <h3 className={styles.service__title}>{title}</h3>
+      <h3 className={styles.service__title}>
+        <FormattedMessage id={`services.${id}.title`} />
+      </h3>
     </header>
     <main className={styles.service__main}>
       {details.map(({ label, Icons }, detail_i) => (
@@ -61,7 +63,9 @@ const Service = ({ title, Icon, details }) => (
           {Icons.map((I, icon_i) => (
             <I key={icon_i} />
           ))}
-          <span>{label}</span>
+          <span>
+            <FormattedMessage id={`services.${id}.description.${label}`} />
+          </span>
         </p>
       ))}
     </main>

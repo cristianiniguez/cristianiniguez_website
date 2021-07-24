@@ -21,8 +21,8 @@ import ExternalLink from '../ExternalLink';
 
 const projects = [
   {
+    id: '01',
     name: 'Tu Solucionario de Matemáticas',
-    description: 'Cursos gratis de matemáticas para estudiantes escolares y universitarios',
     technologies: [{ name: 'React', Icon: SiReact }],
     links: {
       page: 'https://tu-solucionario-de-matematicas.web.app',
@@ -32,8 +32,8 @@ const projects = [
     },
   },
   {
+    id: '02',
     name: 'SaitoLab Inventory',
-    description: 'Sistema de gestión de inventario',
     technologies: [
       { name: 'Electron', Icon: SiElectron },
       { name: 'MySQL', Icon: SiMysql },
@@ -45,8 +45,8 @@ const projects = [
     },
   },
   {
+    id: '03',
     name: 'Platzi Web Challenge',
-    description: 'Retos de la Escuela de Desarrollo Web de Platzi',
     technologies: [
       { name: 'HTML', Icon: SiHtml5 },
       { name: 'CSS', Icon: SiCss3 },
@@ -59,8 +59,8 @@ const projects = [
     },
   },
   {
+    id: '04',
     name: 'SaitoLab Notes',
-    description: 'Aplicación de Notas en Markdown',
     technologies: [
       { name: 'React', Icon: SiReact },
       { name: 'Bootstrap', Icon: SiBootstrap },
@@ -74,8 +74,8 @@ const projects = [
     },
   },
   {
+    id: '05',
     name: 'Tu Solucionario de Progamación',
-    description: 'Blogs de programación para todos',
     technologies: [
       { name: 'React', Icon: SiReact },
       { name: 'Firebase', Icon: SiFirebase },
@@ -91,13 +91,15 @@ const projects = [
   },
 ];
 
-const Project = ({ n, name, description, technologies, links: { page, repo, image } }) => {
+const Project = ({ n, id, name, technologies, links: { page, repo, image } }) => {
   return (
     <div className={styles.project}>
       <div className={styles.project__info}>
         <div className={styles.project__glass}>
           <h3 className={styles.project__title}>{name}</h3>
-          <p className={styles.project__description}>{description}</p>
+          <p className={styles.project__description}>
+            <FormattedMessage id={`projects.${id}.desc`} />
+          </p>
           <div className={styles.project__technologies}>
             {technologies.map((t, i) => (
               <t.Icon key={i} title={t.name} />
