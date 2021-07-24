@@ -1,3 +1,38 @@
 {
-  "about.title": "Sobre mí"
+  "header.link.home": "Inicio",
+  "header.link.about": "Sobre mí",
+  "header.link.services": "Servicios",
+  "header.link.projects": "Proyectos",
+  "header.link.contact": "Contacto",
+
+  "hero.firstname": "Cristian",
+  "hero.lastname": "Iñiguez",
+  "hero.description": "Desarrollador Web",
+  "hero.location": "Santa Cruz - Bolivia",
+
+  "about.title": "Sobre mí",
+  "about.description": "Soy un Desarrollador Web Junior con pasión por la tecnología y el software 👨‍💻. Actualmente estoy estudiando desarrollo web en Platzi 🌱. Mi objetivo es especializarme como Fullstack Developer y desarrollar aplicaciones multiplataforma con tecnologia web 💪.",
+  "about.cv": "Ver mi CV",
+
+  "knowledges.title": "Mis conocimientos",
+  "knowledges.subtitle.languages": "Lenguajes",
+  "knowledges.subtitle.frameworks": "Frameworks",
+  "knowledges.subtitle.databases": "Bases de datos",
+  "knowledges.subtitle.others": "Otras tecnologías",
+
+  "experience.title": "Mi Experiencia",
+  "experience.today": "Hoy",
+
+  "services.title": "Mis Servicios",
+
+  "projects.title": "Mis Proyectos",
+  "projects.link.page": "Ver Página",
+  "projects.link.repo": "Ver Repositorio",
+
+  "contact.title": "Contáctame",
+  "contact.form.name": "Tu nombre",
+  "contact.form.email": "Tu correo",
+  "contact.form.message": "Tu mensaje",
+  "contact.message.chat": "Si tienes un negocio o quieres establecer tu propia marca no dudes en contactarme",
+  "contact.message.social": "También puedes visitar mis redes sociales"
 }

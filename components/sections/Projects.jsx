@@ -1,3 +1,4 @@
+import { FormattedMessage } from 'react-intl';
 import Fade from 'react-reveal/Fade';
 import {
   SiHtml5,
@@ -13,7 +14,6 @@ import {
   SiMongodb,
   SiFirebase,
 } from 'react-icons/si';
-import { FaExternalLinkAlt } from 'react-icons/fa';
 import classNames from 'classnames';
 
 import styles from '../../styles/components/sections/Projects.module.scss';
@@ -106,12 +106,12 @@ const Project = ({ n, name, description, technologies, links: { page, repo, imag
           <div className={styles.project__links}>
             {page && (
               <ExternalLink href={page} className={styles.project__link}>
-                Link a la página
+                <FormattedMessage id='projects.link.page' />
               </ExternalLink>
             )}
             {repo && (
               <ExternalLink href={repo} className={styles.project__link}>
-                Link al repositorio
+                <FormattedMessage id='projects.link.repo' />
               </ExternalLink>
             )}
           </div>
@@ -131,7 +131,9 @@ const Projects = () => {
   return (
     <section id='projects' className={classNames(styles.projects, 'section')}>
       <div className='container'>
-        <h2 className='section__title'>Mis proyectos</h2>
+        <h2 className='section__title'>
+          <FormattedMessage id='projects.title' />
+        </h2>
         <div className={styles.projects__grid}>
           {projects.map((p, i) => (
             <Project key={i} {...p} n={i} />

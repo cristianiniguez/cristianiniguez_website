@@ -1,3 +1,4 @@
+import { FormattedMessage } from 'react-intl';
 import Fade from 'react-reveal/Fade';
 import { FaGlobeAmericas } from 'react-icons/fa';
 
@@ -14,12 +15,20 @@ const Hero = () => {
       </Fade>
       <div className={styles.hero__info}>
         <h1 className={styles.hero__name}>
-          <span className={styles['hero__first-name']}>Cristian</span>{' '}
-          <span className={styles['hero__last-name']}>Iñiguez</span> ⚡
+          <span className={styles['hero__first-name']}>
+            <FormattedMessage id='hero.firstname' />
+          </span>{' '}
+          <span className={styles['hero__last-name']}>
+            <FormattedMessage id='hero.lastname' />
+          </span>{' '}
+          ⚡
         </h1>
-        <p className={styles.hero__description}>Junior Web Developer</p>
+        <p className={styles.hero__description}>
+          <FormattedMessage id='hero.description' />
+        </p>
         <p className={styles.hero__country}>
-          <FaGlobeAmericas /> Santa Cruz - Bolivia
+          <FaGlobeAmericas />
+          <FormattedMessage id='hero.location' />
         </p>
       </div>
     </section>

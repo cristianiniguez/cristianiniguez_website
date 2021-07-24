@@ -16,13 +16,11 @@ const About = () => {
             <FormattedMessage id='about.title' />
           </h2>
           <p>
-            Soy un Desarrollador Web Junior con pasión por la tecnología y el software 👨‍💻.
-            Actualmente estoy estudiando desarrollo web en Platzi 🌱. Mi objetivo es especializarme
-            como Fullstack Developer y desarrollar aplicaciones multiplataforma con tecnologia web
-            💪.
+            <FormattedMessage id='about.description' />
           </p>
           <a className={styles.about__cv} href='/docs/cristian-iniguez-cv.pdf' target='_blank'>
-            Ver mi CV <FaExternalLinkAlt />
+            <FormattedMessage id='about.cv' />
+            <FaExternalLinkAlt />
           </a>
         </div>
       </div>

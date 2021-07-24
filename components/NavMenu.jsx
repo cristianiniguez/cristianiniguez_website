@@ -1,15 +1,16 @@
 import { useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 import { FaBars } from 'react-icons/fa';
 import classNames from 'classnames';
 
 import styles from '../styles/components/NavMenu.module.scss';
 
 const items = [
-  { label: 'Inicio', href: '#' },
-  { label: 'Sobre mí', href: '#about' },
-  { label: 'Servicios', href: '#services' },
-  { label: 'Proyectos', href: '#projects' },
-  { label: 'Contacto', href: '#contact' },
+  { label: 'header.link.home', href: '#' },
+  { label: 'header.link.about', href: '#about' },
+  { label: 'header.link.services', href: '#services' },
+  { label: 'header.link.projects', href: '#projects' },
+  { label: 'header.link.contact', href: '#contact' },
 ];
 
 const NavMenu = () => {
@@ -23,7 +24,9 @@ const NavMenu = () => {
       >
         {items.map(({ label, href }, i) => (
           <li key={i} onClick={() => setShown(false)}>
-            <a href={href}>{label}</a>
+            <a href={href}>
+              <FormattedMessage id={label} />
+            </a>
           </li>
         ))}
       </ul>

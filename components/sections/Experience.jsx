@@ -1,3 +1,4 @@
+import { FormattedMessage } from 'react-intl';
 import { FaCarSide } from 'react-icons/fa';
 import classNames from 'classnames';
 
@@ -28,7 +29,7 @@ const Job = ({ place, icon, title, activities, from, to, index }) => {
         <img src={`/images/jobs/${icon}`} alt={`Icono de ${place}`} />
         <div className={styles.job__time}>
           <p>
-            {from} - {to || 'Hoy'}
+            {from} - {to || <FormattedMessage id='experience.today' />}
           </p>
         </div>
         <div className={styles.job__tooltip}>
@@ -51,7 +52,9 @@ const Experience = () => {
   return (
     <section id='experience' className={classNames(styles.experience, 'section section--light')}>
       <div className='container'>
-        <h2 className='section__title'>Mi Experiencia</h2>
+        <h2 className='section__title'>
+          <FormattedMessage id='experience.title' />
+        </h2>
         <div className={styles.experience__timeline}>
           <div className={styles.experience__pointer}>
             <FaCarSide />

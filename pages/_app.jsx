@@ -6,7 +6,6 @@ import '../styles/index.scss';
 
 const App = ({ Component, pageProps }) => {
   const { locale, defaultLocale } = useRouter();
-  console.log(locale);
 
   return (
     <IntlProvider

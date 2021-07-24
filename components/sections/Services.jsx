@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import { FormattedMessage } from 'react-intl';
 import {
   FaWindowRestore,
   FaBullhorn,
@@ -15,6 +15,7 @@ import {
   FaUser,
   FaNetworkWired,
 } from 'react-icons/fa';
+import classNames from 'classnames';
 
 import styles from '../../styles/components/sections/Services.module.scss';
 
@@ -71,7 +72,9 @@ const Services = () => {
   return (
     <section id='services' className={classNames(styles.services, 'section section--light')}>
       <div className='container'>
-        <h2 className='section__title'>Mis Servicios</h2>
+        <h2 className='section__title'>
+          <FormattedMessage id='services.title' />
+        </h2>
         <div className={styles.services__container}>
           {services.map((s, i) => (
             <Service key={i} {...s} />

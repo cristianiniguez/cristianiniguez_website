@@ -1,3 +1,38 @@
 {
-  "about.title": "About me"
+  "header.link.home": "Start",
+  "header.link.about": "About me",
+  "header.link.services": "Services",
+  "header.link.projects": "Proyects",
+  "header.link.contact": "Contact",
+
+  "hero.firstname": "Cristian",
+  "hero.lastname": "Iñiguez",
+  "hero.description": "Web Developer",
+  "hero.location": "Santa Cruz - Bolivia",
+
+  "about.title": "About me",
+  "about.description": "I'm a Web Developer with passion for technology and software 👨‍💻. Actually, I'm studying web development and programming on Platzi 🌱. My goal is to specialize as a Fullstack Developer and develop multiplatform applications with web technologies 💪.",
+  "about.cv": "Watch my CV",
+
+  "knowledges.title": "My Knowledges",
+  "knowledges.subtitle.languages": "Languages",
+  "knowledges.subtitle.frameworks": "Frameworks",
+  "knowledges.subtitle.databases": "Databases",
+  "knowledges.subtitle.others": "Other technologies",
+
+  "experience.title": "My Experience",
+  "experience.today": "Today",
+
+  "services.title": "My Services",
+
+  "projects.title": "My Projects",
+  "projects.link.page": "Watch Page",
+  "projects.link.repo": "Watch Repository",
+
+  "contact.title": "Contact Me",
+  "contact.form.name": "Your name",
+  "contact.form.email": "Your email",
+  "contact.form.message": "Your message",
+  "contact.message.chat": "If you have a business or you're trying to establish your own brand, do not hesitate to contact me",
+  "contact.message.social": "Also, you can visit my social networks"
 }

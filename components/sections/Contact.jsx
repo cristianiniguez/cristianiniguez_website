@@ -1,3 +1,4 @@
+import { FormattedMessage } from 'react-intl';
 import {
   FaWhatsapp,
   FaFacebookMessenger,
@@ -36,19 +37,23 @@ const Contact = () => {
   return (
     <section id='contact' className={classNames(styles.contact, 'section section--light')}>
       <div className='container'>
-        <h2 className='section__title'>Contáctame</h2>
+        <h2 className='section__title'>
+          <FormattedMessage id='contact.title' />
+        </h2>
         <div className={styles.contact__grid}>
           <ContactForm />
           <div className={styles.contact__links}>
             <p>
-              Si tienes un negocio o quieres establecer tu propia marca no dudes en contactarme.
+              <FormattedMessage id='contact.message.chat' />
             </p>
             <div className={styles.contact__icons}>
               {contacts.links.map((l, i) => (
                 <ContactLink key={i} {...l} />
               ))}
             </div>
-            <p>También puedes visitar mis redes sociales</p>
+            <p>
+              <FormattedMessage id='contact.message.social' />
+            </p>
             <div className={styles.contact__icons}>
               {contacts.social.map((l, i) => (
                 <ContactLink key={i} {...l} />
