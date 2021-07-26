@@ -75,7 +75,7 @@ const projects = [
   },
   {
     id: '05',
-    name: 'Tu Solucionario de Progamación',
+    name: 'Tu Solucionario de Programación',
     technologies: [
       { name: 'React', Icon: SiReact },
       { name: 'Firebase', Icon: SiFirebase },

@@ -9,7 +9,7 @@ const jobs = [
     id: 'hexacorp',
     place: 'Hexacorp',
     icon: 'hexacorp.svg',
-    from: new Date(2021, 1),
+    from: new Date(2021, 0),
   },
 ];
 
@@ -27,12 +27,10 @@ const Job = ({ id, place, icon, from, to, index }) => {
         />
         <div className={styles.job__time}>
           <p>
-            {from && <FormattedDate value={from} year='numeric' month='long' />} -{' '}
-            {to ? (
-              <FormattedDate value={to} year='numeric' month='long' />
-            ) : (
-              <FormattedMessage id='experience.today' />
-            )}
+            {from && intl.formatDate(from, { year: 'numeric', month: 'long' }).toUpperCase()} -{' '}
+            {to
+              ? intl.formatDate(to, { year: 'numeric', month: 'long' }).toUpperCase()
+              : intl.messages['experience.today'].toUpperCase()}
           </p>
         </div>
         <div className={styles.job__tooltip}>
