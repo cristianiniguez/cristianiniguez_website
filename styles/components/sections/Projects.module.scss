@@ -1,5 +1,9 @@
 @import '../../global';
 
+.projects {
+  overflow: hidden;
+}
+
 .project {
   text-align: center;
   margin: 2em 0;
@@ -56,6 +60,10 @@
   &__img {
     grid-area: image;
     margin: 1em 0;
+
+    span {
+      overflow: visible !important;
+    }
 
     img {
       display: block;

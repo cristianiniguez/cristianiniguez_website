@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useIntl, FormattedMessage } from 'react-intl';
 import Fade from 'react-reveal/Fade';
 import { FaGlobeAmericas } from 'react-icons/fa';
@@ -12,8 +13,7 @@ const Hero = () => {
     <section className={styles.hero}>
       <Fade>
         <div className={styles.hero__img}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src='/images/me.jpg' alt={messages['hero.image.alt']} />
+          <Image src='/images/me.jpg' alt={messages['hero.image.alt']} width={250} height={250} />
         </div>
       </Fade>
       <div className={styles.hero__info}>

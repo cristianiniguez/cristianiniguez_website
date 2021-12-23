@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useIntl, FormattedMessage, FormattedDate } from 'react-intl';
 import { FaCarSide } from 'react-icons/fa';
 import classNames from 'classnames';
@@ -20,10 +21,11 @@ const Job = ({ id, place, icon, from, to, index }) => {
   return (
     <div className={styles.job} style={{ left: `${left}%` }}>
       <div className={styles.job__container}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src={`/images/jobs/${icon}`}
           alt={intl.formatMessage({ id: 'experience.icon.alt' }, { name: place })}
+          width={24}
+          height={24}
         />
         <div className={styles.job__time}>
           <p>

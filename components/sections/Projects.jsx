@@ -18,6 +18,7 @@ import classNames from 'classnames';
 
 import styles from '../../styles/components/sections/Projects.module.scss';
 import ExternalLink from '../ExternalLink';
+import Image from 'next/image';
 
 const projects = [
   {
@@ -27,8 +28,11 @@ const projects = [
     links: {
       page: 'https://tu-solucionario-de-matematicas.web.app',
       repo: 'https://github.com/cristianiniguez/tu_solucionario_de_matematicas',
-      image:
-        'https://github.com/cristianiniguez/tu_solucionario_de_matematicas/raw/master/screenshot.png',
+      image: {
+        src: 'https://github.com/cristianiniguez/tu_solucionario_de_matematicas/raw/master/screenshot.png',
+        width: 460,
+        height: 500,
+      },
     },
   },
   {
@@ -40,8 +44,11 @@ const projects = [
     ],
     links: {
       repo: 'https://github.com/cristianiniguez/saitolab-inventory',
-      image:
-        'https://github.com/cristianiniguez/saitolab-inventory/raw/master/screenshots/main-window.png',
+      image: {
+        src: 'https://github.com/cristianiniguez/saitolab-inventory/raw/master/screenshots/main-window.png',
+        width: 460,
+        height: 245,
+      },
     },
   },
   {
@@ -55,7 +62,11 @@ const projects = [
     links: {
       page: 'https://cristianiniguez.github.io/platziwebchallenge',
       repo: 'https://github.com/cristianiniguez/platziwebchallenge',
-      image: 'https://github.com/cristianiniguez/platziwebchallenge/raw/master/screenshot.png',
+      image: {
+        src: 'https://github.com/cristianiniguez/platziwebchallenge/raw/master/screenshot.png',
+        width: 460,
+        height: 342,
+      },
     },
   },
   {
@@ -70,7 +81,11 @@ const projects = [
     links: {
       page: 'https://saitolab-notes.vercel.app',
       repo: 'https://github.com/cristianiniguez/saitolab_notes',
-      image: 'https://github.com/cristianiniguez/saitolab_notes/raw/main/screenshot.png',
+      image: {
+        src: 'https://github.com/cristianiniguez/saitolab_notes/raw/main/screenshot.png',
+        width: 460,
+        height: 238,
+      },
     },
   },
   {
@@ -85,8 +100,11 @@ const projects = [
     links: {
       page: 'https://tusolucionariodeprogramacion.web.app',
       repo: 'https://github.com/cristianiniguez/tu_solucionario_de_programacion',
-      image:
-        'https://github.com/cristianiniguez/tu_solucionario_de_programacion/raw/main/screenshot.png',
+      image: {
+        src: 'https://github.com/cristianiniguez/tu_solucionario_de_programacion/raw/main/screenshot.png',
+        width: 460,
+        height: 615,
+      },
     },
   },
 ];
@@ -121,8 +139,7 @@ const Project = ({ n, id, name, technologies, links: { page, repo, image } }) =>
       </div>
       <Fade right={n % 2 === 0} left={n % 2 !== 0}>
         <div className={styles.project__img}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={image} alt={name} />
+          <Image {...image} alt={name} />
         </div>
       </Fade>
     </div>
