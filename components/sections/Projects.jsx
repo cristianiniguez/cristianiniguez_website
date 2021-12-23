@@ -4,7 +4,6 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
-  SiNodeDotJs,
   SiReact,
   SiTypescript,
   SiSass,
@@ -13,6 +12,7 @@ import {
   SiMysql,
   SiMongodb,
   SiFirebase,
+  SiNodedotjs,
 } from 'react-icons/si';
 import classNames from 'classnames';
 
@@ -23,7 +23,7 @@ const projects = [
   {
     id: '01',
     name: 'Tu Solucionario de Matemáticas',
-    technologies: [{ name: 'React', Icon: SiReact }],
+    technologies: [{ name: 'React', icon: SiReact }],
     links: {
       page: 'https://tu-solucionario-de-matematicas.web.app',
       repo: 'https://github.com/cristianiniguez/tu_solucionario_de_matematicas',
@@ -35,8 +35,8 @@ const projects = [
     id: '02',
     name: 'SaitoLab Inventory',
     technologies: [
-      { name: 'Electron', Icon: SiElectron },
-      { name: 'MySQL', Icon: SiMysql },
+      { name: 'Electron', icon: SiElectron },
+      { name: 'MySQL', icon: SiMysql },
     ],
     links: {
       repo: 'https://github.com/cristianiniguez/saitolab-inventory',
@@ -48,9 +48,9 @@ const projects = [
     id: '03',
     name: 'Platzi Web Challenge',
     technologies: [
-      { name: 'HTML', Icon: SiHtml5 },
-      { name: 'CSS', Icon: SiCss3 },
-      { name: 'JavaScript', Icon: SiJavascript },
+      { name: 'HTML', icon: SiHtml5 },
+      { name: 'CSS', icon: SiCss3 },
+      { name: 'JavaScript', icon: SiJavascript },
     ],
     links: {
       page: 'https://cristianiniguez.github.io/platziwebchallenge',
@@ -62,10 +62,10 @@ const projects = [
     id: '04',
     name: 'SaitoLab Notes',
     technologies: [
-      { name: 'React', Icon: SiReact },
-      { name: 'Bootstrap', Icon: SiBootstrap },
-      { name: 'Node JS (Express y Passport)', Icon: SiNodeDotJs },
-      { name: 'MongoDB', Icon: SiMongodb },
+      { name: 'React', icon: SiReact },
+      { name: 'Bootstrap', icon: SiBootstrap },
+      { name: 'Node JS (Express y Passport)', icon: SiNodedotjs },
+      { name: 'MongoDB', icon: SiMongodb },
     ],
     links: {
       page: 'https://saitolab-notes.vercel.app',
@@ -77,10 +77,10 @@ const projects = [
     id: '05',
     name: 'Tu Solucionario de Programación',
     technologies: [
-      { name: 'React', Icon: SiReact },
-      { name: 'Firebase', Icon: SiFirebase },
-      { name: 'TypeScript', Icon: SiTypescript },
-      { name: 'Sass', Icon: SiSass },
+      { name: 'React', icon: SiReact },
+      { name: 'Firebase', icon: SiFirebase },
+      { name: 'TypeScript', icon: SiTypescript },
+      { name: 'Sass', icon: SiSass },
     ],
     links: {
       page: 'https://tusolucionariodeprogramacion.web.app',
@@ -102,7 +102,7 @@ const Project = ({ n, id, name, technologies, links: { page, repo, image } }) =>
           </p>
           <div className={styles.project__technologies}>
             {technologies.map((t, i) => (
-              <t.Icon key={i} title={t.name} />
+              <t.icon key={i} title={t.name} />
             ))}
           </div>
           <div className={styles.project__links}>
