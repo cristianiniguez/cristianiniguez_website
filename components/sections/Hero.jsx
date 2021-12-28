@@ -23,8 +23,7 @@ const Hero = () => {
           </span>{' '}
           <span className={styles['hero__last-name']}>
             <FormattedMessage id='hero.lastname' />
-          </span>{' '}
-          ⚡
+          </span>
         </h1>
         <p className={styles.hero__description}>
           <FormattedMessage id='hero.description' />
