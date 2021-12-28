@@ -11,6 +11,13 @@ const jobs = [
     place: 'Hexacorp',
     icon: 'hexacorp.svg',
     from: new Date(2021, 0),
+    to: new Date(2021, 7),
+  },
+  {
+    id: 'oktana',
+    place: 'Oktana',
+    icon: 'oktana.png',
+    from: new Date(2021, 10),
   },
 ];
 
