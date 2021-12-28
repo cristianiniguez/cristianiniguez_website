@@ -41,9 +41,16 @@
   background-color: transparent;
   color: $white;
   border: none;
+  border-radius: 0.5rem;
   outline: none;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($white, 0.2);
+  }
 
   img {
     height: 16px;
