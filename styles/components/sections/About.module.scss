@@ -37,9 +37,11 @@
       margin-left: 0.5em;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: $blue10;
       background-color: $shadow;
+      outline: none;
     }
   }
 }
