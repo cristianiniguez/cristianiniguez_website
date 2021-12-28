@@ -20,6 +20,7 @@ const NavLang = () => {
       <button className={styles.btn} onClick={() => setShown(!shown)}>
         <Flag code={flagCodes[locale]} />
       </button>
+
       <ul className={classNames('reseted', styles.menu, { [styles['menu--shown']]: shown })}>
         {locales.map((l) => (
           <li key={l} onClick={() => setShown(false)}>
