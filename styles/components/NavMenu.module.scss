@@ -10,7 +10,7 @@
   right: 0;
   top: 200%;
   display: none;
-  border: 2px solid $white;
+  border: 2px solid $gray;
   border-radius: 0.5em;
   transition: 0.5s ease-in-out all;
   flex-direction: column;
@@ -82,7 +82,7 @@
   }
 
   li:not(:last-of-type) a {
-    border-bottom: 1px solid $white;
+    border-bottom: 2px solid $gray;
   }
 }
 
