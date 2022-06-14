@@ -14,22 +14,22 @@
   "license": "MIT",
   "homepage": "https://www.cristianiniguez.com",
   "dependencies": {
-    "axios": "^0.24.0",
+    "axios": "^0.27.2",
     "classnames": "^2.3.1",
     "formik": "^2.2.9",
-    "next": "^12.0.7",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-intl": "^5.24.0",
+    "next": "^12.1.6",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.4.0",
+    "react-intl": "^6.0.4",
     "react-reveal": "^1.2.2",
-    "react-world-flags": "^1.4.0"
+    "react-world-flags": "^1.5.0"
   },
   "devDependencies": {
-    "eslint": "^8.5.0",
-    "eslint-config-next": "^12.0.7",
-    "postcss": "^8.4.5",
-    "sass": "^1.45.1"
+    "eslint": "^8.17.0",
+    "eslint-config-next": "^12.1.6",
+    "postcss": "^8.4.14",
+    "sass": "^1.52.3"
   },
   "repository": {
     "type": "git",
