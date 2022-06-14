@@ -8,7 +8,7 @@
 .menu {
   position: absolute;
   right: 0;
-  top: 220%;
+  top: 200%;
   display: none;
 
   &--shown {
@@ -24,8 +24,8 @@
     $size: 16px;
     width: $size;
     height: $size;
-    background-color: $black;
-    box-shadow: 5px 5px 5px rgba($black, 0.5);
+    background-color: rgba($black, 0.75);
+    border: 2px solid $gray;
     border-radius: 50%;
     padding: 0.75em;
     display: flex;
@@ -34,6 +34,12 @@
     img {
       width: 100%;
     }
+
+    &:hover,
+    &:focus {
+      background-color: rgba($blue20, 0.75);
+      outline: none;
+    }
   }
 }
 
@@ -41,9 +47,16 @@
   background-color: transparent;
   color: $white;
   border: none;
+  border-radius: 0.5rem;
   outline: none;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($white, 0.2);
+  }
 
   img {
     height: 16px;

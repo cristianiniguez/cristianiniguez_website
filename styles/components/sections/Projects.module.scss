@@ -1,5 +1,9 @@
 @import '../../global';
 
+.projects {
+  overflow: hidden;
+}
+
 .project {
   text-align: center;
   margin: 2em 0;
@@ -47,7 +51,8 @@
     padding: 0.5em;
     transition: 0.3s ease;
 
-    &:hover {
+    &:hover,
+    &:focus-within {
       color: $white;
       background-color: rgba(0, 0, 0, 0.2);
     }
@@ -56,6 +61,10 @@
   &__img {
     grid-area: image;
     margin: 1em 0;
+
+    span {
+      overflow: visible !important;
+    }
 
     img {
       display: block;

@@ -1,6 +1,6 @@
 {
   "name": "cristianiniguez_website",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "description": "My website",
   "main": "pages/index.js",
   "scripts": {
@@ -14,22 +14,22 @@
   "license": "MIT",
   "homepage": "https://www.cristianiniguez.com",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.24.0",
     "classnames": "^2.3.1",
     "formik": "^2.2.9",
-    "next": "^11.0.1",
+    "next": "^12.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.2.0",
-    "react-intl": "^5.20.6",
+    "react-icons": "^4.3.1",
+    "react-intl": "^5.24.0",
     "react-reveal": "^1.2.2",
     "react-world-flags": "^1.4.0"
   },
   "devDependencies": {
-    "eslint": "^7.30.0",
-    "eslint-config-next": "^11.0.1",
-    "postcss": "^8.3.5",
-    "sass": "^1.35.1"
+    "eslint": "^8.5.0",
+    "eslint-config-next": "^12.0.7",
+    "postcss": "^8.4.5",
+    "sass": "^1.45.1"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,7 @@ import {
   SiCss3,
   SiJavascript,
   SiGit,
-  SiNodeDotJs,
+  SiNodedotjs,
   SiReact,
   SiTypescript,
   SiSass,
@@ -14,7 +14,7 @@ import {
   SiMongodb,
   SiFirebase,
   SiPython,
-  SiNextDotJs,
+  SiNextdotjs,
   SiPostgresql,
 } from 'react-icons/si';
 import { FaServer, FaBrain, FaRegCircle } from 'react-icons/fa';
@@ -24,36 +24,36 @@ import styles from '../../styles/components/sections/Knowledges.module.scss';
 
 const knowledges = {
   languages: [
-    { name: 'HTML', Icon: SiHtml5, starred: true },
-    { name: 'CSS', Icon: SiCss3, starred: true },
-    { name: 'JavaScript', Icon: SiJavascript, starred: true },
-    { name: 'TypeScript', Icon: SiTypescript, starred: true },
-    { name: 'Sass', Icon: SiSass, starred: true },
-    { name: 'Python', Icon: SiPython, starred: true },
+    { name: 'HTML', icon: SiHtml5, starred: true },
+    { name: 'CSS', icon: SiCss3, starred: true },
+    { name: 'JavaScript', icon: SiJavascript, starred: true },
+    { name: 'TypeScript', icon: SiTypescript, starred: true },
+    { name: 'Sass', icon: SiSass, starred: true },
+    { name: 'Python', icon: SiPython, starred: true },
   ],
   frameworks: [
-    { name: 'NodeJS', Icon: SiNodeDotJs, starred: false },
-    { name: 'React', Icon: SiReact, starred: true },
-    { name: 'Electron', Icon: SiElectron, starred: true },
-    { name: 'Bootstrap', Icon: SiBootstrap, starred: false },
-    { name: 'Express', Icon: FaServer, starred: false },
-    { name: 'Next', Icon: SiNextDotJs, starred: true },
+    { name: 'NodeJS', icon: SiNodedotjs, starred: false },
+    { name: 'React', icon: SiReact, starred: true },
+    { name: 'Electron', icon: SiElectron, starred: true },
+    { name: 'Bootstrap', icon: SiBootstrap, starred: false },
+    { name: 'Express', icon: FaServer, starred: false },
+    { name: 'Next', icon: SiNextdotjs, starred: true },
   ],
   databases: [
-    { name: 'MySQL', Icon: SiMysql, starred: false },
-    { name: 'POstgreSQL', Icon: SiPostgresql, starred: false },
-    { name: 'MongoDB', Icon: SiMongodb, starred: false },
-    { name: 'Firebase', Icon: SiFirebase, starred: false },
+    { name: 'MySQL', icon: SiMysql, starred: false },
+    { name: 'POstgreSQL', icon: SiPostgresql, starred: false },
+    { name: 'MongoDB', icon: SiMongodb, starred: false },
+    { name: 'Firebase', icon: SiFirebase, starred: false },
   ],
   others: [
-    { name: 'Git', Icon: SiGit, starred: true },
-    { name: 'Odoo', Icon: FaRegCircle, starred: true },
+    { name: 'Git', icon: SiGit, starred: true },
+    { name: 'Odoo', icon: FaRegCircle, starred: true },
   ],
 };
 
-const Knowledge = ({ name, Icon, starred }) => (
+const Knowledge = ({ name, icon: Icon, starred }) => (
   <div className={classNames(styles.knowledge, { [styles['knowledge--star']]: starred })}>
-    <Icon />
+    {Icon && <Icon />}
     <span>{name}</span>
   </div>
 );

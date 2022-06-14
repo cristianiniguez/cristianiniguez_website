@@ -8,9 +8,9 @@
 .menu {
   position: absolute;
   right: 0;
-  top: 120%;
+  top: 200%;
   display: none;
-  border: 1px solid $white;
+  border: 2px solid $gray;
   border-radius: 0.5em;
   transition: 0.5s ease-in-out all;
   flex-direction: column;
@@ -32,13 +32,14 @@
   }
 
   a {
-    background-color: rgba($black, 0.5);
+    background-color: rgba($black, 0.75);
     backdrop-filter: blur(10px);
     display: block;
     padding: 1em 2em;
     color: $white;
     text-align: center;
     transition: background-color 0.1s ease-in;
+    white-space: nowrap;
 
     @include md {
       background-color: transparent;
@@ -62,8 +63,10 @@
       }
     }
 
+    &:focus,
     &:hover {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba($blue20, 0.75);
+      outline: none;
 
       @include md {
         background-color: transparent;
@@ -79,19 +82,27 @@
   }
 
   li:not(:last-of-type) a {
-    border-bottom: 1px solid $white;
+    border-bottom: 2px solid $gray;
   }
 }
 
 .btn {
   background-color: transparent;
   color: $white;
-  border: none;
-  outline: none;
   font-size: 1.5em;
+  border: none;
+  border-radius: 0.25rem;
+  outline: none;
+  padding: 0.25rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($white, 0.2);
+  }
 
   @include md {
     display: none;

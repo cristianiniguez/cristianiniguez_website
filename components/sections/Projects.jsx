@@ -4,7 +4,6 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
-  SiNodeDotJs,
   SiReact,
   SiTypescript,
   SiSass,
@@ -13,80 +12,99 @@ import {
   SiMysql,
   SiMongodb,
   SiFirebase,
+  SiNodedotjs,
 } from 'react-icons/si';
 import classNames from 'classnames';
 
 import styles from '../../styles/components/sections/Projects.module.scss';
 import ExternalLink from '../ExternalLink';
+import Image from 'next/image';
 
 const projects = [
   {
     id: '01',
     name: 'Tu Solucionario de Matemáticas',
-    technologies: [{ name: 'React', Icon: SiReact }],
+    technologies: [{ name: 'React', icon: SiReact }],
     links: {
       page: 'https://tu-solucionario-de-matematicas.web.app',
       repo: 'https://github.com/cristianiniguez/tu_solucionario_de_matematicas',
-      image:
-        'https://github.com/cristianiniguez/tu_solucionario_de_matematicas/raw/master/screenshot.png',
+      image: {
+        src: 'https://github.com/cristianiniguez/tu_solucionario_de_matematicas/raw/master/screenshot.png',
+        width: 460,
+        height: 500,
+      },
     },
   },
   {
     id: '02',
     name: 'SaitoLab Inventory',
     technologies: [
-      { name: 'Electron', Icon: SiElectron },
-      { name: 'MySQL', Icon: SiMysql },
+      { name: 'Electron', icon: SiElectron },
+      { name: 'MySQL', icon: SiMysql },
     ],
     links: {
       repo: 'https://github.com/cristianiniguez/saitolab-inventory',
-      image:
-        'https://github.com/cristianiniguez/saitolab-inventory/raw/master/screenshots/main-window.png',
+      image: {
+        src: 'https://github.com/cristianiniguez/saitolab-inventory/raw/master/screenshots/main-window.png',
+        width: 460,
+        height: 245,
+      },
     },
   },
   {
     id: '03',
     name: 'Platzi Web Challenge',
     technologies: [
-      { name: 'HTML', Icon: SiHtml5 },
-      { name: 'CSS', Icon: SiCss3 },
-      { name: 'JavaScript', Icon: SiJavascript },
+      { name: 'HTML', icon: SiHtml5 },
+      { name: 'CSS', icon: SiCss3 },
+      { name: 'JavaScript', icon: SiJavascript },
     ],
     links: {
       page: 'https://cristianiniguez.github.io/platziwebchallenge',
       repo: 'https://github.com/cristianiniguez/platziwebchallenge',
-      image: 'https://github.com/cristianiniguez/platziwebchallenge/raw/master/screenshot.png',
+      image: {
+        src: 'https://github.com/cristianiniguez/platziwebchallenge/raw/master/screenshot.png',
+        width: 460,
+        height: 342,
+      },
     },
   },
   {
     id: '04',
     name: 'SaitoLab Notes',
     technologies: [
-      { name: 'React', Icon: SiReact },
-      { name: 'Bootstrap', Icon: SiBootstrap },
-      { name: 'Node JS (Express y Passport)', Icon: SiNodeDotJs },
-      { name: 'MongoDB', Icon: SiMongodb },
+      { name: 'React', icon: SiReact },
+      { name: 'Bootstrap', icon: SiBootstrap },
+      { name: 'Node JS (Express y Passport)', icon: SiNodedotjs },
+      { name: 'MongoDB', icon: SiMongodb },
     ],
     links: {
       page: 'https://saitolab-notes.vercel.app',
       repo: 'https://github.com/cristianiniguez/saitolab_notes',
-      image: 'https://github.com/cristianiniguez/saitolab_notes/raw/main/screenshot.png',
+      image: {
+        src: 'https://github.com/cristianiniguez/saitolab_notes/raw/main/screenshot.png',
+        width: 460,
+        height: 238,
+      },
     },
   },
   {
     id: '05',
     name: 'Tu Solucionario de Programación',
     technologies: [
-      { name: 'React', Icon: SiReact },
-      { name: 'Firebase', Icon: SiFirebase },
-      { name: 'TypeScript', Icon: SiTypescript },
-      { name: 'Sass', Icon: SiSass },
+      { name: 'React', icon: SiReact },
+      { name: 'Firebase', icon: SiFirebase },
+      { name: 'TypeScript', icon: SiTypescript },
+      { name: 'Sass', icon: SiSass },
     ],
     links: {
       page: 'https://tusolucionariodeprogramacion.web.app',
       repo: 'https://github.com/cristianiniguez/tu_solucionario_de_programacion',
-      image:
-        'https://github.com/cristianiniguez/tu_solucionario_de_programacion/raw/main/screenshot.png',
+      image: {
+        src: 'https://github.com/cristianiniguez/tu_solucionario_de_programacion/raw/main/screenshot.png',
+        width: 460,
+        height: 615,
+      },
     },
   },
 ];
@@ -102,7 +120,7 @@ const Project = ({ n, id, name, technologies, links: { page, repo, image } }) =>
           </p>
           <div className={styles.project__technologies}>
             {technologies.map((t, i) => (
-              <t.Icon key={i} title={t.name} />
+              <t.icon key={i} title={t.name} />
             ))}
           </div>
           <div className={styles.project__links}>
@@ -121,8 +139,7 @@ const Project = ({ n, id, name, technologies, links: { page, repo, image } }) =>
       </div>
       <Fade right={n % 2 === 0} left={n % 2 !== 0}>
         <div className={styles.project__img}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={image} alt={name} />
+          <Image {...image} alt={name} />
         </div>
       </Fade>
     </div>
