@@ -60,6 +60,19 @@ const Job = ({ id, place, icon, from, to, index }) => {
   );
 };
 
+const ExperienceTimeline = () => {
+  return (
+    <div className={styles.experience__timeline}>
+      <div className={styles.experience__pointer}>
+        <FaCarSide />
+      </div>
+      {jobs.map((job, i) => (
+        <Job {...job} key={i} index={i} />
+      ))}
+    </div>
+  );
+};
+
 const Experience = () => {
   return (
     <section id='experience' className={classNames(styles.experience, 'section section--light')}>
@@ -67,14 +80,7 @@ const Experience = () => {
         <h2 className='section__title'>
           <FormattedMessage id='experience.title' />
         </h2>
-        <div className={styles.experience__timeline}>
-          <div className={styles.experience__pointer}>
-            <FaCarSide />
-          </div>
-          {jobs.map((job, i) => (
-            <Job {...job} key={i} index={i} />
-          ))}
-        </div>
+        <ExperienceTimeline />
       </div>
     </section>
   );
