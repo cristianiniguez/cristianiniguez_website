@@ -7,9 +7,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <p>
         ©{' '}
-        <Link href='/'>
-          <a>Cristian Iñiguez</a>
-        </Link>{' '}
+        <Link href='/'>Cristian Iñiguez</Link>{' '}
         · 2020
       </p>
     </footer>

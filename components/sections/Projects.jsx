@@ -137,11 +137,11 @@ const Project = ({ n, id, name, technologies, links: { page, repo, image } }) =>
           </div>
         </div>
       </div>
-      <Fade right={n % 2 === 0} left={n % 2 !== 0}>
+      {/* <Fade right={n % 2 === 0} left={n % 2 !== 0}> */}
         <div className={styles.project__img}>
           <Image {...image} alt={name} />
         </div>
-      </Fade>
+      {/* </Fade> */}
     </div>
   );
 };

@@ -25,9 +25,7 @@ const NavLang = () => {
         {locales.map((l) => (
           <li key={l} onClick={() => setShown(false)}>
             <Link href='/' locale={l}>
-              <a>
-                <Flag code={flagCodes[l]} />
-              </a>
+              <Flag code={flagCodes[l]} />
             </Link>
           </li>
         ))}

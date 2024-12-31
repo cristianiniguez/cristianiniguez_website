@@ -10,10 +10,8 @@ const Header = () => {
 
   return (
     <header className={classNames(styles.header, { [styles['header--black']]: scroll > 100 })}>
-      <Link href='/'>
-        <a className={styles.header__link}>
-          <p className={styles.header__logo}>CI</p>
-        </a>
+      <Link className={styles.header__link} href='/'>
+        <p className={styles.header__logo}>CI</p>
       </Link>
       <Navbar />
     </header>

@@ -11,11 +11,11 @@ const Hero = () => {
 
   return (
     <section className={styles.hero}>
-      <Fade>
+      {/* <Fade> */}
         <div className={styles.hero__img}>
           <Image src='/images/me.jpg' alt={messages['hero.image.alt']} width={250} height={250} />
         </div>
-      </Fade>
+      {/* </Fade> */}
       <div className={styles.hero__info}>
         <h1 className={styles.hero__name}>
           <span className={styles['hero__first-name']}>
