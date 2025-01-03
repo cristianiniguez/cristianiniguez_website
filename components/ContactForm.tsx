@@ -1,34 +1,43 @@
 import { useIntl, FormattedMessage } from 'react-intl';
-import { Formik, Form, Field } from 'formik';
-import axios from 'axios';
+import { Formik, Form, Field, FormikConfig } from 'formik'
+import axios from 'axios'
 
-import styles from '../styles/components/ContactForm.module.scss';
+import styles from '../styles/components/ContactForm.module.scss'
+import classNames from 'classnames'
 
-const sendMail = ({ values }) => {
+type ContactFormValues = {
+  name: string
+  email: string
+  message: string
+}
+
+type ContactFormFormikConfig = FormikConfig<ContactFormValues>
+
+const sendMail = (values: ContactFormValues) => {
   return axios.post('https://formspree.io/f/xzbydykd', values, {
-    headers: { Accept: 'application/json' },
-  });
-};
+    headers: { Accept: 'application/json' }
+  })
+}
 
 const ContactForm = () => {
   const { messages } = useIntl();
 
-  const initialValues = { name: '', email: '', message: '' };
+  const initialValues = { name: '', email: '', message: '' }
 
-  const onSubmit = async (values, { setSubmitting, resetForm, setStatus }) => {
-    setStatus(undefined);
+  const onSubmit: ContactFormFormikConfig['onSubmit'] = async (values, { setSubmitting, resetForm, setStatus }) => {
+    setStatus(undefined)
     try {
-      const response = await sendMail(values);
-      console.log(response);
-      resetForm();
-      setStatus('success');
+      const response = await sendMail(values)
+      console.log(response)
+      resetForm()
+      setStatus('success')
     } catch (error) {
-      console.error(error);
-      setStatus('error');
+      console.error(error)
+      setStatus('error')
     } finally {
-      setSubmitting(false);
+      setSubmitting(false)
     }
-  };
+  }
 
   return (
     <div className={styles['contact-form']}>
@@ -54,10 +63,11 @@ const ContactForm = () => {
               <p
                 className={classNames(
                   styles['contact-form__status'],
-                  styles[`contact-form__status--${status}`],
+                  styles[`contact-form__status--${status}`]
                 )}
               >
-                {status === 'success' && 'Tu mensaje se envió satisfactoriamente'}
+                {status === 'success' &&
+                  'Tu mensaje se envió satisfactoriamente'}
                 {status === 'error' && 'Ha ocurrido un error'}
               </p>
             )}
@@ -65,7 +75,7 @@ const ContactForm = () => {
         )}
       </Formik>
     </div>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm

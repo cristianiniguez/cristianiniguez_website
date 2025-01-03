@@ -27,7 +27,12 @@ const contacts = {
   ],
 };
 
-const ContactLink = ({ Icon, href }) => (
+type ContactLinkProps = {
+  Icon: React.ElementType
+  href: string
+}
+
+const ContactLink: React.FC<ContactLinkProps> = ({ Icon, href }) => (
   <a href={href} target='_blank' rel='noreferrer'>
     <Icon />
   </a>

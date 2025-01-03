@@ -1,4 +1,4 @@
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl'
 import {
   SiHtml5,
   SiCss3,
@@ -11,13 +11,13 @@ import {
   SiMysql,
   SiMongodb,
   SiFirebase,
-  SiNodedotjs,
-} from 'react-icons/si';
-import classNames from 'classnames';
+  SiNodedotjs
+} from 'react-icons/si'
+import classNames from 'classnames'
 
-import styles from '../../styles/components/sections/Projects.module.scss';
-import ExternalLink from '../ExternalLink';
-import Image from 'next/image';
+import styles from '../../styles/components/sections/Projects.module.scss'
+import ExternalLink from '../ExternalLink'
+import Image from 'next/image'
 
 const projects = [
   {
@@ -30,25 +30,25 @@ const projects = [
       image: {
         src: 'https://github.com/cristianiniguez/tu_solucionario_de_matematicas/raw/master/screenshot.png',
         width: 460,
-        height: 500,
-      },
-    },
+        height: 500
+      }
+    }
   },
   {
     id: '02',
     name: 'SaitoLab Inventory',
     technologies: [
       { name: 'Electron', icon: SiElectron },
-      { name: 'MySQL', icon: SiMysql },
+      { name: 'MySQL', icon: SiMysql }
     ],
     links: {
       repo: 'https://github.com/cristianiniguez/saitolab-inventory',
       image: {
         src: 'https://github.com/cristianiniguez/saitolab-inventory/raw/master/screenshots/main-window.png',
         width: 460,
-        height: 245,
-      },
-    },
+        height: 245
+      }
+    }
   },
   {
     id: '03',
@@ -56,7 +56,7 @@ const projects = [
     technologies: [
       { name: 'HTML', icon: SiHtml5 },
       { name: 'CSS', icon: SiCss3 },
-      { name: 'JavaScript', icon: SiJavascript },
+      { name: 'JavaScript', icon: SiJavascript }
     ],
     links: {
       page: 'https://cristianiniguez.github.io/platziwebchallenge',
@@ -64,9 +64,9 @@ const projects = [
       image: {
         src: 'https://github.com/cristianiniguez/platziwebchallenge/raw/master/screenshot.png',
         width: 460,
-        height: 342,
-      },
-    },
+        height: 342
+      }
+    }
   },
   {
     id: '04',
@@ -75,7 +75,7 @@ const projects = [
       { name: 'React', icon: SiReact },
       { name: 'Bootstrap', icon: SiBootstrap },
       { name: 'Node JS (Express y Passport)', icon: SiNodedotjs },
-      { name: 'MongoDB', icon: SiMongodb },
+      { name: 'MongoDB', icon: SiMongodb }
     ],
     links: {
       page: 'https://saitolab-notes.vercel.app',
@@ -83,9 +83,9 @@ const projects = [
       image: {
         src: 'https://github.com/cristianiniguez/saitolab_notes/raw/main/screenshot.png',
         width: 460,
-        height: 238,
-      },
-    },
+        height: 238
+      }
+    }
   },
   {
     id: '05',
@@ -94,7 +94,7 @@ const projects = [
       { name: 'React', icon: SiReact },
       { name: 'Firebase', icon: SiFirebase },
       { name: 'TypeScript', icon: SiTypescript },
-      { name: 'Sass', icon: SiSass },
+      { name: 'Sass', icon: SiSass }
     ],
     links: {
       page: 'https://tusolucionariodeprogramacion.web.app',
@@ -102,13 +102,31 @@ const projects = [
       image: {
         src: 'https://github.com/cristianiniguez/tu_solucionario_de_programacion/raw/main/screenshot.png',
         width: 460,
-        height: 615,
-      },
-    },
-  },
-];
+        height: 615
+      }
+    }
+  }
+]
 
-const Project = ({ n, id, name, technologies, links: { page, repo, image } }) => {
+type ProjectProps = {
+  n: number
+  id: string
+  name: string
+  technologies: { name: string; icon: React.ElementType }[]
+  links: {
+    page?: string
+    repo: string
+    image: { src: string; width: number; height: number }
+  }
+}
+
+const Project: React.FC<ProjectProps> = ({
+  n,
+  id,
+  name,
+  technologies,
+  links: { page, repo, image }
+}) => {
   return (
     <div className={styles.project}>
       <div className={styles.project__info}>
@@ -140,8 +158,8 @@ const Project = ({ n, id, name, technologies, links: { page, repo, image } }) =>
         <Image {...image} alt={name} />
       </div>
     </div>
-  );
-};
+  )
+}
 
 const Projects = () => {
   return (
@@ -157,7 +175,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Projects;
+export default Projects

@@ -1,4 +1,4 @@
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl'
 import {
   FaWindowRestore,
   FaBullhorn,
@@ -13,11 +13,11 @@ import {
   FaDatabase,
   FaPalette,
   FaUser,
-  FaNetworkWired,
-} from 'react-icons/fa';
-import classNames from 'classnames';
+  FaNetworkWired
+} from 'react-icons/fa'
+import classNames from 'classnames'
 
-import styles from '../../styles/components/sections/Services.module.scss';
+import styles from '../../styles/components/sections/Services.module.scss'
 
 const services = [
   {
@@ -26,8 +26,8 @@ const services = [
     details: [
       { label: '01', Icons: [FaBullhorn, FaGlobeAmericas] },
       { label: '02', Icons: [FaMobileAlt, FaTabletAlt] },
-      { label: '03', Icons: [FaLanguage] },
-    ],
+      { label: '03', Icons: [FaLanguage] }
+    ]
   },
   {
     id: '02',
@@ -35,8 +35,8 @@ const services = [
     details: [
       { label: '01', Icons: [FaWindows, FaApple, FaLinux] },
       { label: '02', Icons: [FaDatabase] },
-      { label: '03', Icons: [FaPalette] },
-    ],
+      { label: '03', Icons: [FaPalette] }
+    ]
   },
   {
     id: '03',
@@ -44,17 +44,26 @@ const services = [
     details: [
       { label: '01', Icons: [FaUser] },
       { label: '02', Icons: [FaDatabase] },
-      { label: '03', Icons: [FaNetworkWired] },
-    ],
-  },
-];
+      { label: '03', Icons: [FaNetworkWired] }
+    ]
+  }
+]
 
-const Service = ({ id, Icon, details }) => (
+type ServiceProps = {
+  id: string
+  Icon: React.ElementType
+  details: {
+    label: string
+    Icons: React.ElementType[]
+  }[]
+}
+
+const Service: React.FC<ServiceProps> = ({ id, Icon, details }) => (
   <article className={styles.service}>
     <header className={styles.service__header}>
       <Icon />
       <h3 className={styles.service__title}>
-        <FormattedMessage id={`services.${id}.title`} />
+        {/* <FormattedMessage id={`services.${id}.title`} /> */}
       </h3>
     </header>
     <main className={styles.service__main}>
@@ -70,11 +79,14 @@ const Service = ({ id, Icon, details }) => (
       ))}
     </main>
   </article>
-);
+)
 
 const Services = () => {
   return (
-    <section id='services' className={classNames(styles.services, 'section section--light')}>
+    <section
+      id='services'
+      className={classNames(styles.services, 'section section--light')}
+    >
       <div className='container'>
         <h2 className='section__title'>
           <FormattedMessage id='services.title' />
@@ -86,7 +98,7 @@ const Services = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services

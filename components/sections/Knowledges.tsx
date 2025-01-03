@@ -1,4 +1,4 @@
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl'
 import {
   SiHtml5,
   SiCss3,
@@ -15,12 +15,12 @@ import {
   SiFirebase,
   SiPython,
   SiNextdotjs,
-  SiPostgresql,
-} from 'react-icons/si';
-import { FaServer, FaBrain, FaRegCircle } from 'react-icons/fa';
-import classNames from 'classnames';
+  SiPostgresql
+} from 'react-icons/si'
+import { FaServer, FaBrain, FaRegCircle } from 'react-icons/fa'
+import classNames from 'classnames'
 
-import styles from '../../styles/components/sections/Knowledges.module.scss';
+import styles from '../../styles/components/sections/Knowledges.module.scss'
 
 const knowledges = {
   languages: [
@@ -29,7 +29,7 @@ const knowledges = {
     { name: 'JavaScript', icon: SiJavascript, starred: true },
     { name: 'TypeScript', icon: SiTypescript, starred: true },
     { name: 'Sass', icon: SiSass, starred: true },
-    { name: 'Python', icon: SiPython, starred: true },
+    { name: 'Python', icon: SiPython, starred: true }
   ],
   frameworks: [
     { name: 'NodeJS', icon: SiNodedotjs, starred: false },
@@ -37,28 +37,42 @@ const knowledges = {
     { name: 'Electron', icon: SiElectron, starred: true },
     { name: 'Bootstrap', icon: SiBootstrap, starred: false },
     { name: 'Express', icon: FaServer, starred: false },
-    { name: 'Next', icon: SiNextdotjs, starred: true },
+    { name: 'Next', icon: SiNextdotjs, starred: true }
   ],
   databases: [
     { name: 'MySQL', icon: SiMysql, starred: false },
     { name: 'POstgreSQL', icon: SiPostgresql, starred: false },
     { name: 'MongoDB', icon: SiMongodb, starred: false },
-    { name: 'Firebase', icon: SiFirebase, starred: false },
+    { name: 'Firebase', icon: SiFirebase, starred: false }
   ],
   others: [
     { name: 'Git', icon: SiGit, starred: true },
-    { name: 'Odoo', icon: FaRegCircle, starred: true },
-  ],
-};
+    { name: 'Odoo', icon: FaRegCircle, starred: true }
+  ]
+} as const
 
-const Knowledge = ({ name, icon: Icon, starred }) => (
-  <div className={classNames(styles.knowledge, { [styles['knowledge--star']]: starred })}>
+type KnowledgeProps = {
+  name: string
+  icon: React.ElementType
+  starred: boolean
+}
+
+const Knowledge: React.FC<KnowledgeProps> = ({ name, icon: Icon, starred }) => (
+  <div
+    className={classNames(styles.knowledge, {
+      [styles['knowledge--star']]: starred
+    })}
+  >
     {Icon && <Icon />}
     <span>{name}</span>
   </div>
-);
+)
 
-const KnowledgesGroup = ({ id }) => (
+type KnowledgesGroupProps = {
+  id: keyof typeof knowledges
+}
+
+const KnowledgesGroup: React.FC<KnowledgesGroupProps> = ({ id }) => (
   <div className={styles.knowledges__group}>
     <h3>
       <FormattedMessage id={`knowledges.subtitle.${id}`} />
@@ -69,7 +83,7 @@ const KnowledgesGroup = ({ id }) => (
       ))}
     </div>
   </div>
-);
+)
 
 const Knowledges = () => {
   return (
@@ -89,7 +103,7 @@ const Knowledges = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Knowledges;
+export default Knowledges

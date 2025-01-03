@@ -1,4 +1,4 @@
-import Layout from '../components/Layout.jsx';
+import Layout from '../components/Layout'
 import {
   Hero,
   About,
@@ -6,9 +6,9 @@ import {
   Experience,
   Services,
   Projects,
-  Contact,
-} from '../components/sections';
-import Spacer from '../components/Spacer.jsx';
+  Contact
+} from '../components/sections/index'
+import Spacer from '../components/Spacer'
 
 const Home = () => {
   return (
@@ -22,7 +22,7 @@ const Home = () => {
       <Projects />
       <Contact />
     </Layout>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home
