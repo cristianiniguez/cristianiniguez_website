@@ -1,6 +1,6 @@
-import NavMenu from './NavMenu';
-import NavLang from './NavLang';
-import styles from '../styles/components/Navbar.module.scss';
+import NavMenu from './NavMenu'
+import NavLang from './NavLang'
+import styles from '../styles/components/Navbar.module.scss'
 
 const Navbar = () => {
   return (
@@ -8,7 +8,7 @@ const Navbar = () => {
       <NavMenu />
       <NavLang />
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

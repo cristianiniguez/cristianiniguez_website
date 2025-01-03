@@ -168,7 +168,7 @@ const Projects = () => {
         </h2>
         <div className={styles.projects__grid}>
           {projects.map((p, i) => (
-            <Project key={i} {...p} n={i} />
+            <Project key={i} {...p} />
           ))}
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { useIntl, FormattedMessage } from 'react-intl';
+import { useIntl, FormattedMessage } from 'react-intl'
 import { Formik, Form, Field, FormikConfig } from 'formik'
 import axios from 'axios'
 
@@ -20,11 +20,14 @@ const sendMail = (values: ContactFormValues) => {
 }
 
 const ContactForm = () => {
-  const { messages } = useIntl();
+  const { messages } = useIntl()
 
   const initialValues = { name: '', email: '', message: '' }
 
-  const onSubmit: ContactFormFormikConfig['onSubmit'] = async (values, { setSubmitting, resetForm, setStatus }) => {
+  const onSubmit: ContactFormFormikConfig['onSubmit'] = async (
+    values,
+    { setSubmitting, resetForm, setStatus }
+  ) => {
     setStatus(undefined)
     try {
       const response = await sendMail(values)
@@ -44,18 +47,24 @@ const ContactForm = () => {
       <Formik {...{ initialValues, onSubmit }}>
         {({ status, isSubmitting }) => (
           <Form>
-            <Field name='name' placeholder={messages['contact.form.name']} required type='text' />
+            <Field
+              name='name'
+              placeholder={messages['contact.form.name']}
+              required
+              type='text'
+            />
             <Field
               name='email'
               placeholder={messages['contact.form.email']}
               required
               type='email'
             />
-            <Field name='message'>
-              {({ field }) => (
-                <textarea {...field} placeholder={messages['contact.form.message']} required />
-              )}
-            </Field>
+            <Field
+              as='textarea'
+              name='message'
+              placeholder={messages['contact.form.message']}
+              required
+            />
             <button disabled={isSubmitting} type='submit'>
               <FormattedMessage id='contact.form.button' />
             </button>

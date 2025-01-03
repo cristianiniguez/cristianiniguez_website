@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import { useIntl, FormattedMessage } from 'react-intl';
+import { useIntl, FormattedMessage } from 'react-intl'
 import Flag from 'react-world-flags'
 
 import styles from '../../styles/components/sections/Hero.module.scss'
 
 const Hero = () => {
-  const { messages } = useIntl();
+  const { messages } = useIntl()
 
   return (
     <section className={styles.hero}>

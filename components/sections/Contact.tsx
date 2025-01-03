@@ -1,4 +1,4 @@
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage } from 'react-intl'
 import {
   FaWhatsapp,
   FaFacebookMessenger,
@@ -6,26 +6,32 @@ import {
   FaEnvelope,
   FaFacebook,
   FaGithub,
-  FaLinkedin,
-} from 'react-icons/fa';
-import clsx from 'clsx';
+  FaLinkedin
+} from 'react-icons/fa'
+import clsx from 'clsx'
 
-import ContactForm from '../ContactForm';
-import styles from '../../styles/components/sections/Contact.module.scss';
+import ContactForm from '../ContactForm'
+import styles from '../../styles/components/sections/Contact.module.scss'
 
 const contacts = {
   links: [
-    { Icon: FaWhatsapp, href: 'https://api.whatsapp.com/send?phone=+59179890908' },
+    {
+      Icon: FaWhatsapp,
+      href: 'https://api.whatsapp.com/send?phone=+59179890908'
+    },
     { Icon: FaFacebookMessenger, href: 'http://m.me/cristian.iniguez.56884' },
     { Icon: FaTelegramPlane, href: 'https://t.me/cristianiniguez' },
-    { Icon: FaEnvelope, href: 'mailto:iniguezcristian2312@gmail.com' },
+    { Icon: FaEnvelope, href: 'mailto:iniguezcristian2312@gmail.com' }
   ],
   social: [
-    { Icon: FaFacebook, href: 'https://www.facebook.com/cristian.iniguez.56884' },
+    {
+      Icon: FaFacebook,
+      href: 'https://www.facebook.com/cristian.iniguez.56884'
+    },
     { Icon: FaGithub, href: 'https://github.com/cristianiniguez' },
-    { Icon: FaLinkedin, href: 'https://www.linkedin.com/in/cristian-iniguez' },
-  ],
-};
+    { Icon: FaLinkedin, href: 'https://www.linkedin.com/in/cristian-iniguez' }
+  ]
+}
 
 type ContactLinkProps = {
   Icon: React.ElementType
@@ -36,11 +42,14 @@ const ContactLink: React.FC<ContactLinkProps> = ({ Icon, href }) => (
   <a href={href} rel='noreferrer' target='_blank'>
     <Icon />
   </a>
-);
+)
 
 const Contact = () => {
   return (
-    <section className={clsx(styles.contact, 'section section--light')} id='contact'>
+    <section
+      className={clsx(styles.contact, 'section section--light')}
+      id='contact'
+    >
       <div className='container'>
         <h2 className='section__title'>
           <FormattedMessage id='contact.title' />
@@ -68,7 +77,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
