@@ -3,7 +3,7 @@ import { Formik, Form, Field, FormikConfig } from 'formik'
 import axios from 'axios'
 
 import styles from '../styles/components/ContactForm.module.scss'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 type ContactFormValues = {
   name: string
@@ -61,7 +61,7 @@ const ContactForm = () => {
             </button>
             {status && (
               <p
-                className={classNames(
+                className={clsx(
                   styles['contact-form__status'],
                   styles[`contact-form__status--${status}`]
                 )}

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useIntl, FormattedMessage, FormattedDate } from 'react-intl'
 import { FaCarSide } from 'react-icons/fa'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 import styles from '../../styles/components/sections/Experience.module.scss'
 
@@ -97,7 +97,7 @@ const Experience = () => {
   return (
     <section
       id='experience'
-      className={classNames(styles.experience, 'section section--light')}
+      className={clsx(styles.experience, 'section section--light')}
     >
       <div className='container'>
         <h2 className='section__title'>

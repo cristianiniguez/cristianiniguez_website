@@ -18,7 +18,7 @@ import {
   SiPostgresql
 } from 'react-icons/si'
 import { FaServer, FaBrain, FaRegCircle } from 'react-icons/fa'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 import styles from '../../styles/components/sections/Knowledges.module.scss'
 
@@ -59,7 +59,7 @@ type KnowledgeProps = {
 
 const Knowledge: React.FC<KnowledgeProps> = ({ name, icon: Icon, starred }) => (
   <div
-    className={classNames(styles.knowledge, {
+    className={clsx(styles.knowledge, {
       [styles['knowledge--star']]: starred
     })}
   >
@@ -87,8 +87,8 @@ const KnowledgesGroup: React.FC<KnowledgesGroupProps> = ({ id }) => (
 
 const Knowledges = () => {
   return (
-    <section className={classNames(styles.knowledges, 'section')}>
-      <div className={classNames(styles.knowledges__container, 'container')}>
+    <section className={clsx(styles.knowledges, 'section')}>
+      <div className={clsx(styles.knowledges__container, 'container')}>
         <div className={styles.knowledges__title}>
           <h2 className='section__title'>
             <FormattedMessage id='knowledges.title' />

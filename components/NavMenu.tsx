@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { FormattedMessage } from 'react-intl'
 import { FaBars } from 'react-icons/fa'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 import styles from '../styles/components/NavMenu.module.scss'
 
@@ -26,7 +26,7 @@ const NavMenu = () => {
 
       <ul
         id='nav-menu'
-        className={classNames('reseted', styles.menu, {
+        className={clsx('reseted', styles.menu, {
           [styles['menu--shown']]: shown
         })}
       >

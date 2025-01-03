@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Flag from 'react-world-flags'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 import styles from '../styles/components/NavLang.module.scss'
 
@@ -24,7 +24,7 @@ const NavLang = () => {
       </button>
 
       <ul
-        className={classNames('reseted', styles.menu, {
+        className={clsx('reseted', styles.menu, {
           [styles['menu--shown']]: shown
         })}
       >

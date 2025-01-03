@@ -3,7 +3,7 @@
 import { useRouter } from 'next/router'
 import { FormattedMessage } from 'react-intl'
 import { FaLaptopCode, FaExternalLinkAlt } from 'react-icons/fa'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 import styles from '../../styles/components/sections/About.module.scss'
 
@@ -12,27 +12,27 @@ const About = () => {
 
   return (
     <section
-      id="about"
-      className={classNames(styles.about, 'section section--light')}
+      id='about'
+      className={clsx(styles.about, 'section section--light')}
     >
-      <div className={classNames(styles.about__container, 'container')}>
+      <div className={clsx(styles.about__container, 'container')}>
         <div className={styles['about__img-container']}>
           <FaLaptopCode className={styles.about__img} />
         </div>
         <div className={styles.about__main}>
-          <h2 className="section__title">
-            <FormattedMessage id="about.title" />
+          <h2 className='section__title'>
+            <FormattedMessage id='about.title' />
           </h2>
           <p>
-            <FormattedMessage id="about.description" />
+            <FormattedMessage id='about.description' />
           </p>
           <a
             className={styles.about__cv}
             href={`/docs/${locale}/cristian-iniguez-cv.pdf`}
-            target="_blank"
-            rel="noreferrer"
+            target='_blank'
+            rel='noreferrer'
           >
-            <FormattedMessage id="about.cv" />
+            <FormattedMessage id='about.cv' />
             <FaExternalLinkAlt />
           </a>
         </div>

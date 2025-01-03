@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 import Navbar from './Navbar'
 import useScroll from '../hooks/useScroll'
@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <header
-      className={classNames(styles.header, {
+      className={clsx(styles.header, {
         [styles['header--black']]: scroll > 100
       })}
     >

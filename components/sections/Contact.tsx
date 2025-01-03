@@ -8,7 +8,7 @@ import {
   FaGithub,
   FaLinkedin,
 } from 'react-icons/fa';
-import classNames from 'classnames';
+import clsx from 'clsx';
 
 import ContactForm from '../ContactForm';
 import styles from '../../styles/components/sections/Contact.module.scss';
@@ -40,7 +40,7 @@ const ContactLink: React.FC<ContactLinkProps> = ({ Icon, href }) => (
 
 const Contact = () => {
   return (
-    <section id='contact' className={classNames(styles.contact, 'section section--light')}>
+    <section id='contact' className={clsx(styles.contact, 'section section--light')}>
       <div className='container'>
         <h2 className='section__title'>
           <FormattedMessage id='contact.title' />

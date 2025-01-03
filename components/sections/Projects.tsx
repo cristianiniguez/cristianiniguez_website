@@ -13,7 +13,7 @@ import {
   SiFirebase,
   SiNodedotjs
 } from 'react-icons/si'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 import styles from '../../styles/components/sections/Projects.module.scss'
 import ExternalLink from '../ExternalLink'
@@ -163,7 +163,7 @@ const Project: React.FC<ProjectProps> = ({
 
 const Projects = () => {
   return (
-    <section id='projects' className={classNames(styles.projects, 'section')}>
+    <section id='projects' className={clsx(styles.projects, 'section')}>
       <div className='container'>
         <h2 className='section__title'>
           <FormattedMessage id='projects.title' />

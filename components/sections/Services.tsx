@@ -15,7 +15,7 @@ import {
   FaUser,
   FaNetworkWired
 } from 'react-icons/fa'
-import classNames from 'classnames'
+import clsx from 'clsx'
 
 import styles from '../../styles/components/sections/Services.module.scss'
 
@@ -85,7 +85,7 @@ const Services = () => {
   return (
     <section
       id='services'
-      className={classNames(styles.services, 'section section--light')}
+      className={clsx(styles.services, 'section section--light')}
     >
       <div className='container'>
         <h2 className='section__title'>
