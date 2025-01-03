@@ -63,7 +63,7 @@ const Service: React.FC<ServiceProps> = ({ id, Icon, details }) => (
     <header className={styles.service__header}>
       <Icon />
       <h3 className={styles.service__title}>
-        {/* <FormattedMessage id={`services.${id}.title`} /> */}
+        <FormattedMessage id={`services.${id}.title`} />
       </h3>
     </header>
     <main className={styles.service__main}>
