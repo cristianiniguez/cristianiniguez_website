@@ -1,4 +1,4 @@
-@import '../global';
+@use '../global';
 
 .header {
   position: sticky;
@@ -12,8 +12,8 @@
   transition: all 0.3s ease-in-out;
 
   &--black {
-    background: $black;
-    box-shadow: 0 5px 10px $black;
+    background: global.$black;
+    box-shadow: 0 5px 10px global.$black;
   }
 
   &__link {
@@ -29,13 +29,13 @@
   }
 
   &__logo {
-    color: $yellow;
+    color: global.$yellow;
     margin: 0;
     font-weight: bold;
     font-size: 2.5em;
 
     &::first-letter {
-      color: $blue;
+      color: global.$blue;
     }
   }
 }

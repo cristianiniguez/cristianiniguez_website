@@ -1,4 +1,4 @@
-@import '../../global';
+@use '../../global';
 
 .hero {
   padding: 5em 2em;
@@ -8,12 +8,12 @@
   flex-direction: column;
   text-align: center;
 
-  @include md {
+  @include global.md {
     flex-direction: row;
     text-align: left;
   }
 
-  @include lg {
+  @include global.lg {
     font-size: 1.25em;
   }
 
@@ -31,11 +31,11 @@
       object-fit: cover;
     }
 
-    @include md {
+    @include global.md {
       margin-right: 32px;
     }
 
-    @include lg {
+    @include global.lg {
       $side: 250px;
       width: $side;
       height: $side;
@@ -49,11 +49,11 @@
   }
 
   &__first-name {
-    color: $blue;
+    color: global.$blue;
   }
 
   &__last-name {
-    color: $yellow;
+    color: global.$yellow;
   }
 
   &__description {
@@ -66,7 +66,7 @@
     align-items: center;
     justify-content: center;
 
-    @include md {
+    @include global.md {
       justify-content: start;
     }
 
@@ -76,7 +76,7 @@
   }
 }
 
-@include md {
+@include global.md {
   .hero {
     flex-direction: row;
     text-align: left;
@@ -87,7 +87,7 @@
   }
 }
 
-@include lg {
+@include global.lg {
   .hero {
     font-size: 1.25em;
   }

@@ -1,4 +1,4 @@
-@import '../../global';
+@use '../../global';
 
 .about {
   text-align: center;
@@ -9,7 +9,7 @@
     align-items: center;
     grid-template-columns: 1fr;
 
-    @include md {
+    @include global.md {
       grid-template-columns: 1fr 2fr;
     }
   }
@@ -17,17 +17,17 @@
   &__img {
     font-size: 3em;
 
-    @include md {
+    @include global.md {
       font-size: 6em;
     }
 
-    @include lg {
+    @include global.lg {
       font-size: 7em;
     }
   }
 
   &__cv {
-    color: $gray;
+    color: global.$gray;
     padding: 5px 10px;
     border-radius: 5px;
     transition: 0.3s;
@@ -39,8 +39,8 @@
 
     &:hover,
     &:focus {
-      color: $blue10;
-      background-color: $shadow;
+      color: global.$blue10;
+      background-color: global.$shadow;
       outline: none;
     }
   }

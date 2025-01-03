@@ -1,4 +1,4 @@
-@import '../../global';
+@use '../../global';
 
 .knowledges {
   &__title {
@@ -28,11 +28,11 @@
       display: grid;
       gap: 1em;
 
-      @include sm {
+      @include global.sm {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      @include lg {
+      @include global.lg {
         grid-template-columns: repeat(3, 1fr);
       }
     }
@@ -47,7 +47,7 @@
   position: relative;
   overflow: hidden;
 
-  @include glass;
+  @include global.glass;
 
   &::after {
     opacity: 0;
@@ -58,12 +58,12 @@
   }
 
   &::before {
-    $bg-color: rgba($white, 0.5);
+    $bg-color: rgba(global.$white, 0.5);
     content: '';
     position: absolute;
     width: 100%;
     height: 0px;
-    box-shadow: 0 0 32px 32px rgba($white, 0.3);
+    box-shadow: 0 0 32px 32px rgba(global.$white, 0.3);
     transform: skewY(-45deg) translateY(-100%);
     top: -150%;
     transition: 0.3s ease-in-out;

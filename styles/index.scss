@@ -1,5 +1,6 @@
+@use 'global';
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
-@import './global';
 
 html {
   scroll-behavior: smooth;
@@ -7,7 +8,7 @@ html {
 
 body {
   margin: 0;
-  font-family: $primary-font;
+  font-family: global.$primary-font;
 }
 
 ul.reseted {
@@ -22,7 +23,7 @@ a {
 }
 
 button {
-  font-family: $primary-font;
+  font-family: global.$primary-font;
 }
 
 .container {
@@ -33,13 +34,13 @@ button {
 .section {
   padding: 3em 2em;
 
-  @include md {
+  @include global.md {
     font-size: 1.25em;
   }
 
   &--light {
-    background: shadow-cross(), $white;
-    color: $blue10;
+    background: global.shadow-cross(), global.$white;
+    color: global.$blue10;
   }
 
   &__title {

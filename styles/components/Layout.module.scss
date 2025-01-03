@@ -1,6 +1,6 @@
-@import '../global';
+@use '../global';
 
 .layout {
-  background: $wiggle, $blue10;
-  color: $white;
+  background: global.$wiggle, global.$blue10;
+  color: global.$white;
 }

@@ -1,4 +1,4 @@
-@import '../global';
+@use '../global';
 
 .nav {
   position: relative;
@@ -10,13 +10,13 @@
     right: 0;
     top: 100%;
     display: none;
-    border: 1px solid $white;
+    border: 1px solid global.$white;
     border-radius: 0.5em;
     transition: 0.5s ease-in-out all;
     flex-direction: column;
     overflow: hidden;
 
-    @include md {
+    @include global.md {
       position: static;
       background-color: transparent;
       border: none;
@@ -35,16 +35,16 @@
       background-color: rgba(0, 0, 0, 0.2);
       display: block;
       padding: 1em 2em;
-      color: $white;
+      color: global.$white;
       text-align: center;
       transition: background-color 0.1s ease-in;
 
-      @include md {
+      @include global.md {
         background-color: transparent;
         font-size: 1.1em;
         padding: 0 1em;
         height: 100%;
-        color: $gray;
+        color: global.$gray;
         border-bottom: none;
         transition: color 0.3s ease-in;
         position: relative;
@@ -56,7 +56,7 @@
           right: 50%;
           left: 50%;
           height: 1px;
-          background-color: $gray;
+          background-color: global.$gray;
           transition: all 0.3s linear;
         }
       }
@@ -64,12 +64,12 @@
       &:hover {
         background-color: rgba(0, 0, 0, 0.5);
 
-        @include md {
+        @include global.md {
           background-color: transparent;
-          color: $white;
+          color: global.$white;
 
           &::after {
-            background-color: $white;
+            background-color: global.$white;
             right: 1em;
             left: 1em;
           }
@@ -78,20 +78,20 @@
     }
 
     li:not(:last-of-type) a {
-      border-bottom: 1px solid $white;
+      border-bottom: 1px solid global.$white;
     }
   }
 
   &__btn {
     background-color: transparent;
-    color: $white;
+    color: global.$white;
     border: none;
     outline: none;
   }
 
   &__menu-btn {
     background-color: transparent;
-    color: $white;
+    color: global.$white;
     border: none;
     outline: none;
     font-size: 2em;
@@ -99,7 +99,7 @@
     justify-content: center;
     align-items: center;
 
-    @include md {
+    @include global.md {
       display: none;
     }
   }

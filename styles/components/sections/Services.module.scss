@@ -1,4 +1,4 @@
-@import '../../global';
+@use '../../global';
 
 .services__container {
   display: flex;
@@ -8,8 +8,8 @@
 
 .service {
   position: relative;
-  background-color: $blue10;
-  color: $white;
+  background-color: global.$blue10;
+  color: global.$white;
   border-radius: 8px;
   text-align: center;
   margin: 4em 1em 0;
@@ -21,9 +21,9 @@
     left: 10%;
     right: 10%;
     transform: translateY(-50%);
-    background-color: $white;
-    color: $blue10;
-    border: 2px solid $blue10;
+    background-color: global.$white;
+    color: global.$blue10;
+    border: 2px solid global.$blue10;
     border-radius: 8px;
     padding: 0.75em;
     display: flex;

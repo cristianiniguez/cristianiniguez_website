@@ -1,4 +1,4 @@
-@import '../global';
+@use '../global';
 
 .container {
   position: relative;
@@ -10,13 +10,13 @@
   right: 0;
   top: 200%;
   display: none;
-  border: 2px solid $gray;
+  border: 2px solid global.$gray;
   border-radius: 0.5em;
   transition: 0.5s ease-in-out all;
   flex-direction: column;
   overflow: hidden;
 
-  @include md {
+  @include global.md {
     position: static;
     background-color: transparent;
     border: none;
@@ -32,21 +32,21 @@
   }
 
   a {
-    background-color: rgba($black, 0.75);
+    background-color: rgba(global.$black, 0.75);
     backdrop-filter: blur(10px);
     display: block;
     padding: 1em 2em;
-    color: $white;
+    color: global.$white;
     text-align: center;
     transition: background-color 0.1s ease-in;
     white-space: nowrap;
 
-    @include md {
+    @include global.md {
       background-color: transparent;
       font-size: 1.1em;
       padding: 0 1em;
       height: 100%;
-      color: $gray;
+      color: global.$gray;
       border-bottom: none;
       transition: color 0.3s ease-in;
       position: relative;
@@ -58,22 +58,22 @@
         right: 50%;
         left: 50%;
         height: 1px;
-        background-color: $gray;
+        background-color: global.$gray;
         transition: all 0.3s linear;
       }
     }
 
     &:focus,
     &:hover {
-      background-color: rgba($blue20, 0.75);
+      background-color: rgba(global.$blue20, 0.75);
       outline: none;
 
-      @include md {
+      @include global.md {
         background-color: transparent;
-        color: $white;
+        color: global.$white;
 
         &::after {
-          background-color: $white;
+          background-color: global.$white;
           right: 1em;
           left: 1em;
         }
@@ -82,13 +82,13 @@
   }
 
   li:not(:last-of-type) a {
-    border-bottom: 2px solid $gray;
+    border-bottom: 2px solid global.$gray;
   }
 }
 
 .btn {
   background-color: transparent;
-  color: $white;
+  color: global.$white;
   font-size: 1.5em;
   border: none;
   border-radius: 0.25rem;
@@ -101,10 +101,10 @@
 
   &:hover,
   &:focus {
-    background-color: rgba($white, 0.2);
+    background-color: rgba(global.$white, 0.2);
   }
 
-  @include md {
+  @include global.md {
     display: none;
   }
 }
