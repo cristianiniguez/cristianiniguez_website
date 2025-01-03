@@ -109,7 +109,6 @@ const projects = [
 ]
 
 type ProjectProps = {
-  n: number
   id: string
   name: string
   technologies: { name: string; icon: React.ElementType }[]
@@ -121,7 +120,6 @@ type ProjectProps = {
 }
 
 const Project: React.FC<ProjectProps> = ({
-  n,
   id,
   name,
   technologies,
@@ -142,12 +140,12 @@ const Project: React.FC<ProjectProps> = ({
           </div>
           <div className={styles.project__links}>
             {page && (
-              <ExternalLink href={page} className={styles.project__link}>
+              <ExternalLink className={styles.project__link} href={page}>
                 <FormattedMessage id='projects.link.page' />
               </ExternalLink>
             )}
             {repo && (
-              <ExternalLink href={repo} className={styles.project__link}>
+              <ExternalLink className={styles.project__link} href={repo}>
                 <FormattedMessage id='projects.link.repo' />
               </ExternalLink>
             )}
@@ -163,7 +161,7 @@ const Project: React.FC<ProjectProps> = ({
 
 const Projects = () => {
   return (
-    <section id='projects' className={clsx(styles.projects, 'section')}>
+    <section className={clsx(styles.projects, 'section')} id='projects'>
       <div className='container'>
         <h2 className='section__title'>
           <FormattedMessage id='projects.title' />

@@ -12,8 +12,8 @@ const About = () => {
 
   return (
     <section
-      id='about'
       className={clsx(styles.about, 'section section--light')}
+      id='about'
     >
       <div className={clsx(styles.about__container, 'container')}>
         <div className={styles['about__img-container']}>
@@ -29,8 +29,8 @@ const About = () => {
           <a
             className={styles.about__cv}
             href={`/docs/${locale}/cristian-iniguez-cv.pdf`}
-            target='_blank'
             rel='noreferrer'
+            target='_blank'
           >
             <FormattedMessage id='about.cv' />
             <FaExternalLinkAlt />

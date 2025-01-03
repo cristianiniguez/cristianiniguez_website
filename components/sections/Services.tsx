@@ -68,7 +68,7 @@ const Service: React.FC<ServiceProps> = ({ id, Icon, details }) => (
     </header>
     <main className={styles.service__main}>
       {details.map(({ label, Icons }, detail_i) => (
-        <p key={detail_i} className={styles.service__detail}>
+        <p className={styles.service__detail} key={detail_i}>
           {Icons.map((I, icon_i) => (
             <I key={icon_i} />
           ))}
@@ -84,8 +84,8 @@ const Service: React.FC<ServiceProps> = ({ id, Icon, details }) => (
 const Services = () => {
   return (
     <section
-      id='services'
       className={clsx(styles.services, 'section section--light')}
+      id='services'
     >
       <div className='container'>
         <h2 className='section__title'>

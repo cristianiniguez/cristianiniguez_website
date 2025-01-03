@@ -12,7 +12,7 @@ type ExternalLinkProps = {
 const ExternalLink: React.FC<ExternalLinkProps> = ({ children, href, className }) => {
   return (
     <div className={clsx(className, styles['external-link'])}>
-      <a href={href} target='_blank' rel='noreferrer'>
+      <a href={href} rel='noreferrer' target='_blank'>
         {children} <FaExternalLinkAlt />
       </a>
     </div>

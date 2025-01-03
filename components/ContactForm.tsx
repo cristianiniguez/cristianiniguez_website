@@ -28,7 +28,7 @@ const ContactForm = () => {
     setStatus(undefined)
     try {
       const response = await sendMail(values)
-      console.log(response)
+      console.info(response)
       resetForm()
       setStatus('success')
     } catch (error) {
@@ -44,19 +44,19 @@ const ContactForm = () => {
       <Formik {...{ initialValues, onSubmit }}>
         {({ status, isSubmitting }) => (
           <Form>
-            <Field name='name' type='text' placeholder={messages['contact.form.name']} required />
+            <Field name='name' placeholder={messages['contact.form.name']} required type='text' />
             <Field
               name='email'
-              type='email'
               placeholder={messages['contact.form.email']}
               required
+              type='email'
             />
             <Field name='message'>
               {({ field }) => (
                 <textarea {...field} placeholder={messages['contact.form.message']} required />
               )}
             </Field>
-            <button type='submit' disabled={isSubmitting}>
+            <button disabled={isSubmitting} type='submit'>
               <FormattedMessage id='contact.form.button' />
             </button>
             {status && (

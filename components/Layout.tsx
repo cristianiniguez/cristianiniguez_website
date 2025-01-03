@@ -12,10 +12,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
     <>
       <Head>
-        <link rel='shortcut icon' href='favicon.svg' type='image/svg' />
+        <link href='favicon.svg' rel='shortcut icon' type='image/svg' />
         <title>{messages['head.title']}</title>
-        <meta name='description' content={messages['head.description'] as string} />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta content={messages['head.description'] as string} name='description' />
+        <meta content='width=device-width, initial-scale=1.0' name='viewport' />
       </Head>
       <div className={styles.layout}>
         <Header />

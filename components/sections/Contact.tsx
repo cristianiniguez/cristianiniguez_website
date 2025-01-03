@@ -33,14 +33,14 @@ type ContactLinkProps = {
 }
 
 const ContactLink: React.FC<ContactLinkProps> = ({ Icon, href }) => (
-  <a href={href} target='_blank' rel='noreferrer'>
+  <a href={href} rel='noreferrer' target='_blank'>
     <Icon />
   </a>
 );
 
 const Contact = () => {
   return (
-    <section id='contact' className={clsx(styles.contact, 'section section--light')}>
+    <section className={clsx(styles.contact, 'section section--light')} id='contact'>
       <div className='container'>
         <h2 className='section__title'>
           <FormattedMessage id='contact.title' />

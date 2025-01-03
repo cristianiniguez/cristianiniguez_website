@@ -25,10 +25,10 @@ const NavMenu = () => {
       </button>
 
       <ul
-        id='nav-menu'
         className={clsx('reseted', styles.menu, {
           [styles['menu--shown']]: shown
         })}
+        id='nav-menu'
       >
         {items.map(({ label, href }, i) => (
           <li key={i} onClick={() => setShown(false)}>

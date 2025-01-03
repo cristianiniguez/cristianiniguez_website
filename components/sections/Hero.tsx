@@ -11,10 +11,10 @@ const Hero = () => {
     <section className={styles.hero}>
       <div className={styles.hero__img}>
         <Image
-          src='/images/me.jpg'
           alt={messages['hero.image.alt'] as string}
-          width={250}
           height={250}
+          src='/images/me.jpg'
+          width={250}
         />
       </div>
       <div className={styles.hero__info}>

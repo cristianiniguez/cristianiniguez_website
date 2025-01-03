@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useIntl, FormattedMessage, FormattedDate } from 'react-intl'
+import { useIntl, FormattedMessage } from 'react-intl'
 import { FaCarSide } from 'react-icons/fa'
 import clsx from 'clsx'
 
@@ -38,13 +38,13 @@ const Job: React.FC<JobProps> = ({ id, place, icon, from, to, index }) => {
     <div className={styles.job} style={{ left: `${left}%` }}>
       <div className={styles.job__container}>
         <Image
-          src={`/images/jobs/${icon}`}
           alt={intl.formatMessage(
             { id: 'experience.icon.alt' },
             { name: place }
           )}
-          width={24}
           height={24}
+          src={`/images/jobs/${icon}`}
+          width={24}
         />
         <div className={styles.job__time}>
           <p>
@@ -87,7 +87,7 @@ const ExperienceTimeline = () => {
         <FaCarSide />
       </div>
       {jobs.map((job, i) => (
-        <Job {...job} key={i} index={i} />
+        <Job {...job} index={i} key={i} />
       ))}
     </div>
   )
@@ -96,8 +96,8 @@ const ExperienceTimeline = () => {
 const Experience = () => {
   return (
     <section
-      id='experience'
       className={clsx(styles.experience, 'section section--light')}
+      id='experience'
     >
       <div className='container'>
         <h2 className='section__title'>
